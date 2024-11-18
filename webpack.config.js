@@ -28,6 +28,14 @@ module.exports = {
         test: /\.scss$/,
         use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
+      {
+        // Handle image files with asset modules (Webpack 5)
+        test: /\.(png|jpe?g|gif|svg|webp)$/i, // Match image file types
+        type: "asset/resource", // Use asset module
+        generator: {
+          filename: "images/[hash][ext][query]", // Output path and naming convention
+        },
+      },
     ],
   },
 

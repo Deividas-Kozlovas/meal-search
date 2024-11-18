@@ -27,7 +27,29 @@ eval("\n\nmodule.exports = ansiHTML\n\n// Reference to https://github.com/sindre
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scss_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./scss/style.scss */ \"./src/scss/style.scss\");\n\n\n//# sourceURL=webpack://webpack-latest/./src/app.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_ui_renderHeader__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/ui/renderHeader */ \"./src/modules/ui/renderHeader.js\");\n/* harmony import */ var _scss_style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scss/style.scss */ \"./src/scss/style.scss\");\n\n\n(0,_modules_ui_renderHeader__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n\n//# sourceURL=webpack://webpack-latest/./src/app.js?");
+
+/***/ }),
+
+/***/ "./src/components/headerComponent/headerComponent.js":
+/*!***********************************************************!*\
+  !*** ./src/components/headerComponent/headerComponent.js ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ headerComponent)\n/* harmony export */ });\n// Import images dynamically using Webpack\nvar logoPath = __webpack_require__(/*! ../../images/logo.png */ \"./src/images/logo.png\");\nvar searchIconPath = __webpack_require__(/*! ../../images/search.png */ \"./src/images/search.png\");\nvar userIconPath = __webpack_require__(/*! ../../images/user.png */ \"./src/images/user.png\");\nvar heroImagePath = __webpack_require__(/*! ../../images/hero-image.png */ \"./src/images/hero-image.png\");\nvar tomatoImagePath = __webpack_require__(/*! ../../images/tomato.png */ \"./src/images/tomato.png\");\nfunction headerComponent() {\n  return \"\\n    <header class=\\\"header\\\">\\n      <nav class=\\\"nav\\\">\\n        <div class=\\\"nav__logo\\\">\\n          <a href=\\\"#\\\" class=\\\"nav__logo-link\\\">\\n            <img src=\\\"\".concat(logoPath, \"\\\" alt=\\\"Recipedio Logo\\\" />\\n            <p>Recipedio</p>\\n          </a>\\n        </div>\\n        <ul class=\\\"nav__links\\\">\\n          <li class=\\\"nav__item\\\">\\n            <a href=\\\"#home\\\" class=\\\"nav__link\\\">Home</a>\\n          </li>\\n          <li class=\\\"nav__item\\\">\\n            <a href=\\\"#recipe\\\" class=\\\"nav__link\\\">Recipe</a>\\n          </li>\\n          <li class=\\\"nav__item\\\">\\n            <a href=\\\"#community\\\" class=\\\"nav__link\\\">Community</a>\\n          </li>\\n          <li class=\\\"nav__item\\\">\\n            <a href=\\\"#about\\\" class=\\\"nav__link\\\">About Us</a>\\n          </li>\\n        </ul>\\n        <div class=\\\"nav__auth\\\">\\n          <input type=\\\"text\\\" placeholder=\\\"Search...\\\" class=\\\"nav__search-box\\\" />\\n          <img class=\\\"nav__search-image\\\" src=\\\"\").concat(searchIconPath, \"\\\" alt=\\\"Search Icon\\\" />\\n          <button class=\\\"nav__login-btn\\\">\\n            <img src=\\\"\").concat(userIconPath, \"\\\" alt=\\\"User Icon\\\" />\\n          </button>\\n        </div>\\n      </nav>\\n      <div class=\\\"hero\\\">\\n        <div class=\\\"hero__content\\\">\\n          <h1>Cooking Made Fun and Easy: Unleash Your Inner Chef</h1>\\n          <p>Discover more than <span>10,000 recipes</span> at your fingertips. Find the easiest way to cook with the best recipes!</p>\\n          <a href=\\\"#explore-recipes\\\" class=\\\"hero__btn\\\">Explore Recipes</a>\\n        </div>\\n        <div class=\\\"hero__images\\\">\\n          <img src=\\\"\").concat(heroImagePath, \"\\\" alt=\\\"Hero Image\\\" class=\\\"hero__image\\\" />\\n          <img src=\\\"\").concat(tomatoImagePath, \"\\\" alt=\\\"Tomato Image\\\" class=\\\"hero__image-tomato\\\" />\\n        </div>\\n      </div>\\n    </header>\\n  \");\n}\n\n//# sourceURL=webpack://webpack-latest/./src/components/headerComponent/headerComponent.js?");
+
+/***/ }),
+
+/***/ "./src/modules/ui/renderHeader.js":
+/*!****************************************!*\
+  !*** ./src/modules/ui/renderHeader.js ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ renderHeader)\n/* harmony export */ });\n/* harmony import */ var _components_headerComponent_headerComponent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../components/headerComponent/headerComponent */ \"./src/components/headerComponent/headerComponent.js\");\n\nfunction renderHeader() {\n  var header = document.querySelector(\"#header\");\n  if (header) {\n    header.innerHTML = \"\";\n    header.innerHTML = (0,_components_headerComponent_headerComponent__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n  } else {\n    console.error(\"Header element was not found\");\n  }\n}\n\n//# sourceURL=webpack://webpack-latest/./src/modules/ui/renderHeader.js?");
 
 /***/ }),
 
@@ -115,7 +137,7 @@ eval("\n\n/* eslint-disable */\n\n/**\n * @param {string[]} pathComponents\n * @
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n    if(true) {\n      (function() {\n        var localsJsonString = undefined;\n        // 1731776863651\n        var cssReload = __webpack_require__(/*! ../../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ \"./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js\")(module.id, {});\n        // only invalidate when locals change\n        if (\n          module.hot.data &&\n          module.hot.data.value &&\n          module.hot.data.value !== localsJsonString\n        ) {\n          module.hot.invalidate();\n        } else {\n          module.hot.accept();\n        }\n        module.hot.dispose(function(data) {\n          data.value = localsJsonString;\n          cssReload();\n        });\n      })();\n    }\n  \n\n//# sourceURL=webpack://webpack-latest/./src/scss/style.scss?");
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n    if(true) {\n      (function() {\n        var localsJsonString = undefined;\n        // 1731955470456\n        var cssReload = __webpack_require__(/*! ../../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ \"./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js\")(module.id, {});\n        // only invalidate when locals change\n        if (\n          module.hot.data &&\n          module.hot.data.value &&\n          module.hot.data.value !== localsJsonString\n        ) {\n          module.hot.invalidate();\n        } else {\n          module.hot.accept();\n        }\n        module.hot.dispose(function(data) {\n          data.value = localsJsonString;\n          cssReload();\n        });\n      })();\n    }\n  \n\n//# sourceURL=webpack://webpack-latest/./src/scss/style.scss?");
 
 /***/ }),
 
@@ -343,6 +365,61 @@ eval("/*\n\tMIT License http://www.opensource.org/licenses/mit-license.php\n\tAu
 
 eval("/** @typedef {\"info\" | \"warning\" | \"error\"} LogLevel */\n\n/** @type {LogLevel} */\nvar logLevel = \"info\";\n\nfunction dummy() {}\n\n/**\n * @param {LogLevel} level log level\n * @returns {boolean} true, if should log\n */\nfunction shouldLog(level) {\n\tvar shouldLog =\n\t\t(logLevel === \"info\" && level === \"info\") ||\n\t\t([\"info\", \"warning\"].indexOf(logLevel) >= 0 && level === \"warning\") ||\n\t\t([\"info\", \"warning\", \"error\"].indexOf(logLevel) >= 0 && level === \"error\");\n\treturn shouldLog;\n}\n\n/**\n * @param {(msg?: string) => void} logFn log function\n * @returns {(level: LogLevel, msg?: string) => void} function that logs when log level is sufficient\n */\nfunction logGroup(logFn) {\n\treturn function (level, msg) {\n\t\tif (shouldLog(level)) {\n\t\t\tlogFn(msg);\n\t\t}\n\t};\n}\n\n/**\n * @param {LogLevel} level log level\n * @param {string|Error} msg message\n */\nmodule.exports = function (level, msg) {\n\tif (shouldLog(level)) {\n\t\tif (level === \"info\") {\n\t\t\tconsole.log(msg);\n\t\t} else if (level === \"warning\") {\n\t\t\tconsole.warn(msg);\n\t\t} else if (level === \"error\") {\n\t\t\tconsole.error(msg);\n\t\t}\n\t}\n};\n\nvar group = console.group || dummy;\nvar groupCollapsed = console.groupCollapsed || dummy;\nvar groupEnd = console.groupEnd || dummy;\n\nmodule.exports.group = logGroup(group);\n\nmodule.exports.groupCollapsed = logGroup(groupCollapsed);\n\nmodule.exports.groupEnd = logGroup(groupEnd);\n\n/**\n * @param {LogLevel} level log level\n */\nmodule.exports.setLogLevel = function (level) {\n\tlogLevel = level;\n};\n\n/**\n * @param {Error} err error\n * @returns {string} formatted error\n */\nmodule.exports.formatError = function (err) {\n\tvar message = err.message;\n\tvar stack = err.stack;\n\tif (!stack) {\n\t\treturn message;\n\t} else if (stack.indexOf(message) < 0) {\n\t\treturn message + \"\\n\" + stack;\n\t}\n\treturn stack;\n};\n\n\n//# sourceURL=webpack://webpack-latest/./node_modules/webpack/hot/log.js?");
 
+/***/ }),
+
+/***/ "./src/images/hero-image.png":
+/*!***********************************!*\
+  !*** ./src/images/hero-image.png ***!
+  \***********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/46efb233b932bcc385f3.png\";\n\n//# sourceURL=webpack://webpack-latest/./src/images/hero-image.png?");
+
+/***/ }),
+
+/***/ "./src/images/logo.png":
+/*!*****************************!*\
+  !*** ./src/images/logo.png ***!
+  \*****************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/0803f59d18032e072522.png\";\n\n//# sourceURL=webpack://webpack-latest/./src/images/logo.png?");
+
+/***/ }),
+
+/***/ "./src/images/search.png":
+/*!*******************************!*\
+  !*** ./src/images/search.png ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/7a28b97ed7fccf5bb3a7.png\";\n\n//# sourceURL=webpack://webpack-latest/./src/images/search.png?");
+
+/***/ }),
+
+/***/ "./src/images/tomato.png":
+/*!*******************************!*\
+  !*** ./src/images/tomato.png ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/28560370bd19c9488826.png\";\n\n//# sourceURL=webpack://webpack-latest/./src/images/tomato.png?");
+
+/***/ }),
+
+/***/ "./src/images/user.png":
+/*!*****************************!*\
+  !*** ./src/images/user.png ***!
+  \*****************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/2dd46b035cfe25e50155.png\";\n\n//# sourceURL=webpack://webpack-latest/./src/images/user.png?");
+
 /***/ })
 
 /******/ 	});
@@ -433,7 +510,7 @@ eval("/** @typedef {\"info\" | \"warning\" | \"error\"} LogLevel */\n\n/** @type
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("a071bf7a9f9d1baf2478")
+/******/ 		__webpack_require__.h = () => ("7e15771b318da1b7fede")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
