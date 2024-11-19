@@ -1,3 +1,4 @@
+import "./headerComponent.scss";
 const logoPath = require("../../images/logo.png");
 const searchIconPath = require("../../images/search.png");
 const userIconPath = require("../../images/user.png");
