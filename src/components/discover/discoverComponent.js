@@ -1,6 +1,9 @@
 import "./discoverComponent.scss";
+const prepTime = require("../../images/preperation-time.png");
+const servings = require("../../images/servings.png");
+const difficulty = require("../../images/difficulty.png");
 
-export default function discoverComponent() {
+export default function discoverComponent(meals) {
   return `
     <div class="discover__header">
       <div class="discover__title">
@@ -12,29 +15,37 @@ export default function discoverComponent() {
       <a href="#" class="discover__see-all">See All</a>
     </div>
     <div class="discover__recipes">
-      <article class="recipe">
-        <div class="recipe__image">
-          <img src="path_to_image.jpg" alt="Dish name image" class="recipe__image-img" />
-        </div>
-        <div class="recipe__info">
-          <div class="recipe__info-duration">
-            <img src="time-icon.png" alt="Time icon" class="recipe__info-icon" />
-            <p class="recipe__info-text">10 min</p>
-          </div>
-          <div class="recipe__info-serving">
-            <img src="serving-icon.png" alt="Serving icon" class="recipe__info-icon" />
-            <p class="recipe__info-text">2 servings</p>
-          </div>
-          <div class="recipe__info-difficulty">
-            <img src="difficulty-icon.png" alt="Difficulty icon" class="recipe__info-icon" />
-            <p class="recipe__info-text">Easy</p>
-          </div>
-          <div class="recipe__details">
-            <p class="recipe__name">Dish Name</p>
-            <a href="recipe-detail-link.html" class="recipe__view-link">View Recipe</a>
-          </div>
-        </div>
-      </article>
+      ${meals
+        .map(
+          (meal) => `
+          <article class="recipe">
+            <div class="recipe__image">
+              <img src="${meal.strMealThumb || "default-image.jpg"}" alt="${
+            meal.strMeal
+          }" class="recipe__image-img" />
+          <div class="recipe__info">
+              <div class="recipe__info-duration">
+                <img src="${prepTime}" alt="Time icon" class="recipe__info-icon" />
+                <p class="recipe__info-text">15 min</p> <!-- Example placeholder -->
+              </div>
+              <div class="recipe__info-serving">
+                <img src="${servings}" alt="Serving icon" class="recipe__info-icon" />
+                <p class="recipe__info-text">2 servings</p> <!-- Example placeholder -->
+              </div>
+              <div class="recipe__info-difficulty">
+                <img src="${difficulty}" alt="Difficulty icon" class="recipe__info-icon" />
+                <p class="recipe__info-text">${meal.strCategory || "Easy"}</p>
+              </div>
+            </div>   
+          </div> 
+            <div class="recipe__details">
+              <p class="recipe__name">${meal.strMeal || "No name"}</p>
+              <a href="#" class="recipe__view-link" target="_blank">View Recipe</a>
+            </div>
+          </article>
+        `
+        )
+        .join("")}
     </div>
   `;
 }

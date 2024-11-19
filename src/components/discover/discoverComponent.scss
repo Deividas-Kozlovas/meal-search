@@ -1,0 +1,140 @@
+@use "../../scss/variables.scss" as var;
+@use "../../scss/mixins.scss" as mixin;
+
+.discover {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 20px 50px 20px;
+    margin-bottom: 20px;
+
+    & .discover__title {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      &-heading {
+        font-size: clamp(2rem, 5vw, 3.5rem);
+        margin: 0;
+        font-weight: bold;
+        color: var.$secondary-color;
+      }
+
+      &-description {
+        font-size: clamp(1rem, 2.5vw, 1.3rem);
+        color: var.$secondary-text-color;
+        opacity: 0.7;
+        margin: 0;
+      }
+    }
+
+    & .discover__see-all {
+      @include mixin.primary-button;
+    }
+  }
+
+  &__recipes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 3rem;
+
+    .recipe {
+      background-color: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease;
+
+      &:hover {
+        transform: scale(1.02);
+      }
+
+      &__image {
+        position: relative;
+
+        width: 100%;
+        height: 400px;
+      }
+
+      &__image-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      &__info {
+        position: absolute;
+        padding: 15px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        bottom: 0px;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.74);
+
+        &-duration,
+        &-serving,
+        &-difficulty {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          font-size: clamp(0.8rem, 2vw, 1rem);
+          color: var.$secondary-color;
+          opacity: 0.8;
+        }
+
+        &-text {
+          color: var.$green-color;
+          font-size: clamp(1rem, 2vw, 1.5rem);
+        }
+      }
+
+      &__info-icon {
+        width: 25px;
+        height: 25px;
+      }
+
+      &__info-text {
+        margin: 0;
+      }
+
+      &__details {
+        padding: 0px 0px 30px 30px;
+      }
+
+      &__name {
+        font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: black;
+      }
+
+      &__view-link {
+        font-size: clamp(0.8rem, 1.5vw, 1rem);
+        font-weight: bold;
+        color: var.$orange-color;
+        text-decoration: none;
+        transition: color 0.3s;
+
+        &:hover {
+          color: var.$red-color;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .discover__recipes {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+  }
+
+  .discover__header {
+    flex-direction: column;
+  }
+
+  .discover__see-all {
+    margin-top: 50px;
+  }
+}

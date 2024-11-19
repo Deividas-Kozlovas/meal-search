@@ -1,4 +1,5 @@
 @use "../../scss/variables.scss" as var;
+@use "../../scss//mixins.scss" as mixin;
 
 .header {
   padding: 20px;
@@ -101,7 +102,7 @@
 
       p {
         font-size: clamp(1rem, 1.5vw, 1.25rem);
-        color: rgb(173, 173, 173);
+        color: var.$secondary-text-color;
         margin: 20px 0;
         max-width: 60%;
 
@@ -111,21 +112,8 @@
       }
 
       .hero__btn {
-        display: inline-block;
-        padding: clamp(12px, 2vw, 20px) clamp(20px, 4vw, 40px);
+        @include mixin.primary-button;
         margin-top: clamp(20px, 4vw, 40px);
-        background-color: var.$orange-color;
-        color: var.$primary-color;
-        text-decoration: none;
-        border-radius: 20px;
-        font-size: clamp(1.25rem, 2vw, 2rem);
-        font-weight: bold;
-        text-align: center;
-        transition: background-color 0.3s ease;
-
-        &:hover {
-          background-color: var.$red-color;
-        }
       }
     }
 
