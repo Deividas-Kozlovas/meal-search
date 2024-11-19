@@ -27,7 +27,18 @@ eval("\n\nmodule.exports = ansiHTML\n\n// Reference to https://github.com/sindre
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_ui_renderDiscover__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/ui/renderDiscover */ \"./src/modules/ui/renderDiscover.js\");\n/* harmony import */ var _modules_ui_renderHeader__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/ui/renderHeader */ \"./src/modules/ui/renderHeader.js\");\n/* harmony import */ var _scss_style_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./scss/style.scss */ \"./src/scss/style.scss\");\n\n\n\n(0,_modules_ui_renderHeader__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n(0,_modules_ui_renderDiscover__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n\n//# sourceURL=webpack://webpack-latest/./src/app.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_ui_renderDiscover__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/ui/renderDiscover */ \"./src/modules/ui/renderDiscover.js\");\n/* harmony import */ var _modules_ui_renderHeader__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/ui/renderHeader */ \"./src/modules/ui/renderHeader.js\");\n/* harmony import */ var _modules_ui_renderAbout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/ui/renderAbout */ \"./src/modules/ui/renderAbout.js\");\n/* harmony import */ var _scss_style_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./scss/style.scss */ \"./src/scss/style.scss\");\n\n\n\n\n(0,_modules_ui_renderHeader__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n(0,_modules_ui_renderDiscover__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n(0,_modules_ui_renderAbout__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n\n//# sourceURL=webpack://webpack-latest/./src/app.js?");
+
+/***/ }),
+
+/***/ "./src/components/about/aboutComponent.js":
+/*!************************************************!*\
+  !*** ./src/components/about/aboutComponent.js ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ aboutComponent)\n/* harmony export */ });\n/* harmony import */ var _aboutComponent_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./aboutComponent.scss */ \"./src/components/about/aboutComponent.scss\");\n\nvar background = __webpack_require__(/*! ../../images/about-background.png */ \"./src/images/about-background.png\");\nvar bread = __webpack_require__(/*! ../../images/bread.png */ \"./src/images/bread.png\");\nvar avocado = __webpack_require__(/*! ../../images/avocado.png */ \"./src/images/avocado.png\");\nfunction aboutComponent() {\n  return \"\\n    <div class=\\\"about-section\\\">\\n      <div class=\\\"about-section__background\\\">\\n        <img src=\\\"\".concat(background, \"\\\" alt=\\\"Background\\\" class=\\\"about-section__background-img\\\">\\n      </div>\\n      <div class=\\\"about-section__content\\\">\\n        <h3 class=\\\"about-section__heading\\\">About Us</h3>\\n        <p class=\\\"about-section__description\\\">\\n          Our recipes are the heart and soul of our culinary community, and they reflect our commitment to providing you with memorable and delightful dining experiences.\\n        </p>\\n        <a href=\\\"#\\\" class=\\\"about-section__link\\\">Learn More</a>\\n        <div class=\\\"about-section__image\\\">\\n          <img src=\\\"\").concat(bread, \"\\\" alt=\\\"Bread\\\" class=\\\"about-section__image about-section__image--bread\\\">\\n          <img src=\\\"\").concat(avocado, \"\\\" alt=\\\"Avocado\\\" class=\\\"about-section__image about-section__image--avocado\\\">\\n        </div>\\n      </div>\\n      <div class=\\\"about-section__footer\\\">\\n        <p class=\\\"about-section__footer-text\\\">50+ Quick Food Recipes That Are Easy To Do!</p>\\n      </div>\\n    </div>\\n  \");\n}\n\n//# sourceURL=webpack://webpack-latest/./src/components/about/aboutComponent.js?");
 
 /***/ }),
 
@@ -64,6 +75,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/modules/ui/renderAbout.js":
+/*!***************************************!*\
+  !*** ./src/modules/ui/renderAbout.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ renderAbout)\n/* harmony export */ });\n/* harmony import */ var _components_about_aboutComponent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../components/about/aboutComponent */ \"./src/components/about/aboutComponent.js\");\n\nfunction renderAbout() {\n  var about = document.querySelector(\"#about\");\n  if (about) {\n    about.innerHTML = \"\";\n    about.innerHTML = (0,_components_about_aboutComponent__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n  } else {\n    console.error(\"About section was not found\");\n  }\n}\n\n//# sourceURL=webpack://webpack-latest/./src/modules/ui/renderAbout.js?");
+
+/***/ }),
+
 /***/ "./src/modules/ui/renderDiscover.js":
 /*!******************************************!*\
   !*** ./src/modules/ui/renderDiscover.js ***!
@@ -82,7 +104,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ renderHeader)\n/* harmony export */ });\n/* harmony import */ var _components_headerComponent_headerComponent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../components/headerComponent/headerComponent */ \"./src/components/headerComponent/headerComponent.js\");\n\nfunction renderHeader() {\n  var header = document.querySelector(\"#header\");\n  if (header) {\n    header.innerHTML = \"\";\n    header.innerHTML = (0,_components_headerComponent_headerComponent__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n  } else {\n    console.error(\"Header element was not found\");\n  }\n}\n\n//# sourceURL=webpack://webpack-latest/./src/modules/ui/renderHeader.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ renderHeader)\n/* harmony export */ });\n/* harmony import */ var _components_headerComponent_headerComponent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../components/headerComponent/headerComponent */ \"./src/components/headerComponent/headerComponent.js\");\n\nfunction renderHeader() {\n  var header = document.querySelector(\"#header\");\n  if (header) {\n    header.innerHTML = \"\";\n    header.innerHTML = (0,_components_headerComponent_headerComponent__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n  } else {\n    console.error(\"Header section was not found\");\n  }\n}\n\n//# sourceURL=webpack://webpack-latest/./src/modules/ui/renderHeader.js?");
 
 /***/ }),
 
@@ -163,6 +185,17 @@ eval("\n\n/* eslint-disable */\n\n/**\n * @param {string[]} pathComponents\n * @
 
 /***/ }),
 
+/***/ "./src/components/about/aboutComponent.scss":
+/*!**************************************************!*\
+  !*** ./src/components/about/aboutComponent.scss ***!
+  \**************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n    if(true) {\n      (function() {\n        var localsJsonString = undefined;\n        // 1732042308608\n        var cssReload = __webpack_require__(/*! ../../../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ \"./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js\")(module.id, {});\n        // only invalidate when locals change\n        if (\n          module.hot.data &&\n          module.hot.data.value &&\n          module.hot.data.value !== localsJsonString\n        ) {\n          module.hot.invalidate();\n        } else {\n          module.hot.accept();\n        }\n        module.hot.dispose(function(data) {\n          data.value = localsJsonString;\n          cssReload();\n        });\n      })();\n    }\n  \n\n//# sourceURL=webpack://webpack-latest/./src/components/about/aboutComponent.scss?");
+
+/***/ }),
+
 /***/ "./src/components/discover/discoverComponent.scss":
 /*!********************************************************!*\
   !*** ./src/components/discover/discoverComponent.scss ***!
@@ -170,7 +203,7 @@ eval("\n\n/* eslint-disable */\n\n/**\n * @param {string[]} pathComponents\n * @
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n    if(true) {\n      (function() {\n        var localsJsonString = undefined;\n        // 1732033535643\n        var cssReload = __webpack_require__(/*! ../../../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ \"./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js\")(module.id, {});\n        // only invalidate when locals change\n        if (\n          module.hot.data &&\n          module.hot.data.value &&\n          module.hot.data.value !== localsJsonString\n        ) {\n          module.hot.invalidate();\n        } else {\n          module.hot.accept();\n        }\n        module.hot.dispose(function(data) {\n          data.value = localsJsonString;\n          cssReload();\n        });\n      })();\n    }\n  \n\n//# sourceURL=webpack://webpack-latest/./src/components/discover/discoverComponent.scss?");
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n    if(true) {\n      (function() {\n        var localsJsonString = undefined;\n        // 1732042309719\n        var cssReload = __webpack_require__(/*! ../../../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ \"./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js\")(module.id, {});\n        // only invalidate when locals change\n        if (\n          module.hot.data &&\n          module.hot.data.value &&\n          module.hot.data.value !== localsJsonString\n        ) {\n          module.hot.invalidate();\n        } else {\n          module.hot.accept();\n        }\n        module.hot.dispose(function(data) {\n          data.value = localsJsonString;\n          cssReload();\n        });\n      })();\n    }\n  \n\n//# sourceURL=webpack://webpack-latest/./src/components/discover/discoverComponent.scss?");
 
 /***/ }),
 
@@ -192,7 +225,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n    if(true) {\n      (function() {\n        var localsJsonString = undefined;\n        // 1732034688391\n        var cssReload = __webpack_require__(/*! ../../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ \"./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js\")(module.id, {});\n        // only invalidate when locals change\n        if (\n          module.hot.data &&\n          module.hot.data.value &&\n          module.hot.data.value !== localsJsonString\n        ) {\n          module.hot.invalidate();\n        } else {\n          module.hot.accept();\n        }\n        module.hot.dispose(function(data) {\n          data.value = localsJsonString;\n          cssReload();\n        });\n      })();\n    }\n  \n\n//# sourceURL=webpack://webpack-latest/./src/scss/style.scss?");
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n    if(true) {\n      (function() {\n        var localsJsonString = undefined;\n        // 1732037019070\n        var cssReload = __webpack_require__(/*! ../../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ \"./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js\")(module.id, {});\n        // only invalidate when locals change\n        if (\n          module.hot.data &&\n          module.hot.data.value &&\n          module.hot.data.value !== localsJsonString\n        ) {\n          module.hot.invalidate();\n        } else {\n          module.hot.accept();\n        }\n        module.hot.dispose(function(data) {\n          data.value = localsJsonString;\n          cssReload();\n        });\n      })();\n    }\n  \n\n//# sourceURL=webpack://webpack-latest/./src/scss/style.scss?");
 
 /***/ }),
 
@@ -422,6 +455,39 @@ eval("/** @typedef {\"info\" | \"warning\" | \"error\"} LogLevel */\n\n/** @type
 
 /***/ }),
 
+/***/ "./src/images/about-background.png":
+/*!*****************************************!*\
+  !*** ./src/images/about-background.png ***!
+  \*****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/c36ead27ecbe1912329d.png\";\n\n//# sourceURL=webpack://webpack-latest/./src/images/about-background.png?");
+
+/***/ }),
+
+/***/ "./src/images/avocado.png":
+/*!********************************!*\
+  !*** ./src/images/avocado.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/34c08a17940180b80ad3.png\";\n\n//# sourceURL=webpack://webpack-latest/./src/images/avocado.png?");
+
+/***/ }),
+
+/***/ "./src/images/bread.png":
+/*!******************************!*\
+  !*** ./src/images/bread.png ***!
+  \******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/2fb1fa78005f5523a993.png\";\n\n//# sourceURL=webpack://webpack-latest/./src/images/bread.png?");
+
+/***/ }),
+
 /***/ "./src/images/difficulty.png":
 /*!***********************************!*\
   !*** ./src/images/difficulty.png ***!
@@ -598,7 +664,7 @@ eval("module.exports = __webpack_require__.p + \"images/2dd46b035cfe25e50155.png
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("401ab0dc238f3e81341b")
+/******/ 		__webpack_require__.h = () => ("e98adc52f7d63c6f2a6c")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */

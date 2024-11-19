@@ -6,6 +6,6 @@ export default function renderHeader() {
     header.innerHTML = "";
     header.innerHTML = headerComponent();
   } else {
-    console.error("Header element was not found");
+    console.error("Header section was not found");
   }
 }
