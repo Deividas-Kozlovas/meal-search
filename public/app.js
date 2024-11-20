@@ -42,25 +42,25 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
-/***/ "./src/components/comunity/communityComponent.js":
-/*!*******************************************************!*\
-  !*** ./src/components/comunity/communityComponent.js ***!
-  \*******************************************************/
+/***/ "./src/components/community/communityComponent.js":
+/*!********************************************************!*\
+  !*** ./src/components/community/communityComponent.js ***!
+  \********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ communityComponent)\n/* harmony export */ });\nfunction communityComponent(reviews) {\n  return \"\\n      <div class=\\\"community-section\\\">\\n        <h2 class=\\\"community-section__title\\\">From Our Community</h2>\\n        <div class=\\\"community-section__cards\\\">\\n          \".concat(reviews.map(function (review) {\n    return \"\\n              <div class=\\\"community-card\\\">\\n                <div class=\\\"community-card__image\\\">\\n                  <img src=\\\"\".concat(review.image, \"\\\" alt=\\\"\").concat(review.title, \"\\\" />\\n                </div>\\n                <div class=\\\"community-card__content\\\">\\n                  <h3 class=\\\"community-card__title\\\">\").concat(review.title || \"Untitled\", \"</h3>\\n                  <p class=\\\"community-card__author\\\">By \").concat(review.author || \"Anonymous\", \"</p>\\n                  <p class=\\\"community-card__description\\\">\").concat(review.description || \"No description provided.\", \"</p>\\n                </div>\\n                <div class=\\\"community-card__actions\\\">\\n                  <span class=\\\"community-card__likes\\\">\\u2764\\uFE0F \").concat(review.likes || 0, \"</span>\\n                  <span class=\\\"community-card__share\\\">\\uD83D\\uDD17 Share</span>\\n                </div>\\n              </div>\\n            \");\n  }).join(\"\"), \"\\n        </div>\\n      </div>\\n    \");\n}\n\n//# sourceURL=webpack://webpack-latest/./src/components/comunity/communityComponent.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ communityComponent)\n/* harmony export */ });\nvar star = __webpack_require__(/*! ../../images/icons/star.png */ \"./src/images/icons/star.png\");\nfunction communityComponent(reviews) {\n  return \"\\n    <div class=\\\"community-section\\\">\\n      <h4 class=\\\"community-section__title\\\">From Our Community</h4>\\n      <div class=\\\"community-section__cards\\\">\\n        \".concat(reviews.map(function (review) {\n    return \"\\n            <div class=\\\"community-card\\\">\\n              <div class=\\\"community-card__user\\\">\\n                <div class=\\\"community-card__user-image\\\">\\n                  <img \\n                    src=\\\"\".concat(review.authoImage || \"default-author.png\", \"\\\" \\n                    alt=\\\"\").concat(review.author || \"Anonymous\", \"'s Profile Picture\\\" \\n                    class=\\\"community-card__author-image\\\"\\n                  />\\n                </div>\\n                <div class=\\\"community-card__user-info\\\">\\n                  <h3 class=\\\"community-card__title\\\">\").concat(review.title || \"Untitled\", \"</h3>\\n                  <p class=\\\"community-card__author\\\">By \").concat(review.author || \"Anonymous\", \"</p>\\n                </div>\\n              </div>\\n              <div class=\\\"community-card__content\\\">\\n                <div class=\\\"community-card__rating\\\">\\n                  <img \\n                    src=\\\"\").concat(star, \"\\\" \\n                    alt=\\\"Review star\\\" \\n                    class=\\\"community-card__star\\\"\\n                  />\\n                </div>\\n                <p class=\\\"community-card__description\\\">\").concat(review.description || \"No description provided.\", \"</p>\\n              </div>\\n              <div class=\\\"community-card__meal\\\">\\n                <img \\n                  src=\\\"\").concat(review.mealImage || \"default-meal.png\", \"\\\" \\n                  alt=\\\"\").concat(review.title || \"Untitled\", \"\\\" \\n                  class=\\\"community-card__meal-image\\\"\\n                />\\n              </div>\\n              <div class=\\\"community-card__actions\\\">\\n                <span class=\\\"community-card__likes\\\">\\u2764\\uFE0F \").concat(review.likes || 0, \"</span>\\n                <span class=\\\"community-card__share\\\">\\uD83D\\uDD17 Share</span>\\n              </div>\\n            </div>\\n          \");\n  }).join(\"\"), \"\\n      </div>\\n    </div>\\n  \");\n}\n\n//# sourceURL=webpack://webpack-latest/./src/components/community/communityComponent.js?");
 
 /***/ }),
 
-/***/ "./src/components/comunity/rewievData.js":
-/*!***********************************************!*\
-  !*** ./src/components/comunity/rewievData.js ***!
-  \***********************************************/
+/***/ "./src/components/community/rewievData.js":
+/*!************************************************!*\
+  !*** ./src/components/community/rewievData.js ***!
+  \************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   rewiev: () => (/* binding */ rewiev)\n/* harmony export */ });\nvar rewiev = [{\n  title: \"Spaghetti Bolognese\",\n  author: \"Lady Rudy\",\n  description: \"I have to say, your Spaghetti Bolognese recipe is nothing short of amazing! I've always been a fan of Italian cuisine, but I was a bit intimidated by the idea of making this classic at home.\",\n  image: \"spaghetti.jpg\",\n  shares: 0\n}, {\n  title: \"Roasted Chicken\",\n  author: \"Emily Rose\",\n  description: \"I've always been a bit hesitant to roast a whole chicken, fearing it might be too complicated, but your recipe changed that for me. The instructions were so clear and easy to follow.\",\n  image: \"chicken.jpg\",\n  likes: 5,\n  shares: 0\n}, {\n  title: \"Vegetable Pot Pie\",\n  author: \"Susan H\",\n  description: \"I've always been a fan of hearty comfort food, and the 'Ultimate Vegetable Pot Pie' recipe on this platform completely exceeded my expectations.\",\n  image: \"potpie.jpg\",\n  likes: 3,\n  shares: 0\n}, {\n  title: \"Fresh Garden Salad\",\n  author: \"Lilac Laura\",\n  description: \"I've always considered myself a salad enthusiast, and this salad recipe is nothing short of a culinary masterpiece and has taken my love for greens to a whole new level.\",\n  image: \"salad.jpg\",\n  likes: 1,\n  shares: 0\n}];\n\n//# sourceURL=webpack://webpack-latest/./src/components/comunity/rewievData.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   rewiev: () => (/* binding */ rewiev)\n/* harmony export */ });\nvar rewiev = [{\n  id: 1,\n  title: \"Spaghetti Bolognese\",\n  author: \"Lady Rudy\",\n  description: \"I have to say, your Spaghetti Bolognese recipe is nothing short of amazing! I've always been a fan of Italian cuisine, but I was a bit intimidated by the idea of making this classic at home.\",\n  authoImage: __webpack_require__(/*! ../../images/community/user/user1.png */ \"./src/images/community/user/user1.png\"),\n  // Author's image\n  mealImage: __webpack_require__(/*! ../../images/community/spaghetti.png */ \"./src/images/community/spaghetti.png\") // Meal image\n}, {\n  id: 2,\n  title: \"Roasted Chicken\",\n  author: \"Emily Rose\",\n  description: \"I've always been a bit hesitant to roast a whole chicken, fearing it might be too complicated, but your recipe changed that for me. The instructions were so clear and easy to follow.\",\n  authoImage: __webpack_require__(/*! ../../images/community/user/user2.png */ \"./src/images/community/user/user2.png\"),\n  mealImage: __webpack_require__(/*! ../../images/community/roasted-chicken.png */ \"./src/images/community/roasted-chicken.png\"),\n  likes: 5,\n  shares: 0\n}, {\n  id: 3,\n  title: \"Vegetable Pot Pie\",\n  author: \"Susan H\",\n  description: \"I've always been a fan of hearty comfort food, and the 'Ultimate Vegetable Pot Pie' recipe on this platform completely exceeded my expectations.\",\n  authoImage: __webpack_require__(/*! ../../images/community/user/user3.png */ \"./src/images/community/user/user3.png\"),\n  mealImage: __webpack_require__(/*! ../../images/community/vegetable-pot-pie.png */ \"./src/images/community/vegetable-pot-pie.png\"),\n  likes: 3,\n  shares: 0\n}, {\n  id: 4,\n  title: \"Fresh Garden Salad\",\n  author: \"Lilac Laura\",\n  description: \"I've always considered myself a salad enthusiast, and this salad recipe is nothing short of a culinary masterpiece and has taken my love for greens to a whole new level.\",\n  authoImage: __webpack_require__(/*! ../../images/community/user/user4.png */ \"./src/images/community/user/user4.png\"),\n  mealImage: __webpack_require__(/*! ../../images/community/fresh-garden-salad.png */ \"./src/images/community/fresh-garden-salad.png\"),\n  likes: 1,\n  shares: 0\n}];\n\n//# sourceURL=webpack://webpack-latest/./src/components/community/rewievData.js?");
 
 /***/ }),
 
@@ -71,7 +71,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ discoverComponent)\n/* harmony export */ });\n/* harmony import */ var _discoverComponent_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./discoverComponent.scss */ \"./src/components/discover/discoverComponent.scss\");\n\nvar prepTime = __webpack_require__(/*! ../../images/preperation-time.png */ \"./src/images/preperation-time.png\");\nvar servings = __webpack_require__(/*! ../../images/servings.png */ \"./src/images/servings.png\");\nvar difficulty = __webpack_require__(/*! ../../images/difficulty.png */ \"./src/images/difficulty.png\");\nfunction discoverComponent(meals) {\n  return \"\\n    <div class=\\\"discover__header\\\">\\n      <div class=\\\"discover__title\\\">\\n        <h2 class=\\\"discover__title-heading\\\">Discover, Create, Share</h2>\\n        <p class=\\\"discover__title-description\\\">\\n          Check out our most popular recipes of this week\\n        </p>\\n      </div>\\n      <a href=\\\"#\\\" class=\\\"discover__see-all\\\">See All</a>\\n    </div>\\n    <div class=\\\"discover__recipes\\\">\\n      \".concat(meals.map(function (meal) {\n    return \"\\n          <article class=\\\"recipe\\\">\\n            <div class=\\\"recipe__image\\\">\\n              <img src=\\\"\".concat(meal.strMealThumb || \"default-image.jpg\", \"\\\" alt=\\\"\").concat(meal.strMeal, \"\\\" class=\\\"recipe__image-img\\\" />\\n          <div class=\\\"recipe__info\\\">\\n              <div class=\\\"recipe__info-duration\\\">\\n                <img src=\\\"\").concat(prepTime, \"\\\" alt=\\\"Time icon\\\" class=\\\"recipe__info-icon\\\" />\\n                <p class=\\\"recipe__info-text\\\">15 min</p> <!-- Example placeholder -->\\n              </div>\\n              <div class=\\\"recipe__info-serving\\\">\\n                <img src=\\\"\").concat(servings, \"\\\" alt=\\\"Serving icon\\\" class=\\\"recipe__info-icon\\\" />\\n                <p class=\\\"recipe__info-text\\\">2 servings</p> <!-- Example placeholder -->\\n              </div>\\n              <div class=\\\"recipe__info-difficulty\\\">\\n                <img src=\\\"\").concat(difficulty, \"\\\" alt=\\\"Difficulty icon\\\" class=\\\"recipe__info-icon\\\" />\\n                <p class=\\\"recipe__info-text\\\">\").concat(meal.strCategory || \"Easy\", \"</p>\\n              </div>\\n            </div>   \\n          </div> \\n            <div class=\\\"recipe__details\\\">\\n              <p class=\\\"recipe__name\\\">\").concat(meal.strMeal || \"No name\", \"</p>\\n              <a href=\\\"#\\\" class=\\\"recipe__view-link\\\" target=\\\"_blank\\\">View Recipe</a>\\n            </div>\\n          </article>\\n        \");\n  }).join(\"\"), \"\\n    </div>\\n  \");\n}\n\n//# sourceURL=webpack://webpack-latest/./src/components/discover/discoverComponent.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ discoverComponent)\n/* harmony export */ });\n/* harmony import */ var _discoverComponent_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./discoverComponent.scss */ \"./src/components/discover/discoverComponent.scss\");\n\nvar prepTime = __webpack_require__(/*! ../../images/icons/preperation-time.png */ \"./src/images/icons/preperation-time.png\");\nvar servings = __webpack_require__(/*! ../../images/icons/servings.png */ \"./src/images/icons/servings.png\");\nvar difficulty = __webpack_require__(/*! ../../images/icons/difficulty.png */ \"./src/images/icons/difficulty.png\");\nfunction discoverComponent(meals) {\n  return \"\\n    <div class=\\\"discover__header\\\">\\n      <div class=\\\"discover__title\\\">\\n        <h2 class=\\\"discover__title-heading\\\">Discover, Create, Share</h2>\\n        <p class=\\\"discover__title-description\\\">\\n          Check out our most popular recipes of this week\\n        </p>\\n      </div>\\n      <a href=\\\"#\\\" class=\\\"discover__see-all\\\">See All</a>\\n    </div>\\n    <div class=\\\"discover__recipes\\\">\\n      \".concat(meals.map(function (meal) {\n    return \"\\n          <article class=\\\"recipe\\\">\\n            <div class=\\\"recipe__image\\\">\\n              <img src=\\\"\".concat(meal.strMealThumb || \"default-image.jpg\", \"\\\" alt=\\\"\").concat(meal.strMeal, \"\\\" class=\\\"recipe__image-img\\\" />\\n          <div class=\\\"recipe__info\\\">\\n              <div class=\\\"recipe__info-duration\\\">\\n                <img src=\\\"\").concat(prepTime, \"\\\" alt=\\\"Time icon\\\" class=\\\"recipe__info-icon\\\" />\\n                <p class=\\\"recipe__info-text\\\">15 min</p> <!-- Example placeholder -->\\n              </div>\\n              <div class=\\\"recipe__info-serving\\\">\\n                <img src=\\\"\").concat(servings, \"\\\" alt=\\\"Serving icon\\\" class=\\\"recipe__info-icon\\\" />\\n                <p class=\\\"recipe__info-text\\\">2 servings</p> <!-- Example placeholder -->\\n              </div>\\n              <div class=\\\"recipe__info-difficulty\\\">\\n                <img src=\\\"\").concat(difficulty, \"\\\" alt=\\\"Difficulty icon\\\" class=\\\"recipe__info-icon\\\" />\\n                <p class=\\\"recipe__info-text\\\">\").concat(meal.strCategory || \"Easy\", \"</p>\\n              </div>\\n            </div>   \\n          </div> \\n            <div class=\\\"recipe__details\\\">\\n              <p class=\\\"recipe__name\\\">\").concat(meal.strMeal || \"No name\", \"</p>\\n              <a href=\\\"#\\\" class=\\\"recipe__view-link\\\" target=\\\"_blank\\\">View Recipe</a>\\n            </div>\\n          </article>\\n        \");\n  }).join(\"\"), \"\\n    </div>\\n  \");\n}\n\n//# sourceURL=webpack://webpack-latest/./src/components/discover/discoverComponent.js?");
 
 /***/ }),
 
@@ -82,7 +82,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ headerComponent)\n/* harmony export */ });\n/* harmony import */ var _headerComponent_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./headerComponent.scss */ \"./src/components/headerComponent/headerComponent.scss\");\n\nvar logoPath = __webpack_require__(/*! ../../images/logo.png */ \"./src/images/logo.png\");\nvar searchIconPath = __webpack_require__(/*! ../../images/search.png */ \"./src/images/search.png\");\nvar userIconPath = __webpack_require__(/*! ../../images/user.png */ \"./src/images/user.png\");\nvar heroImagePath = __webpack_require__(/*! ../../images/hero-image.png */ \"./src/images/hero-image.png\");\nvar tomatoImagePath = __webpack_require__(/*! ../../images/tomato.png */ \"./src/images/tomato.png\");\nfunction headerComponent() {\n  return \"\\n    <header class=\\\"header\\\">\\n      <nav class=\\\"nav\\\">\\n        <div class=\\\"nav__logo\\\">\\n          <a href=\\\"#\\\" class=\\\"nav__logo-link\\\">\\n            <img src=\\\"\".concat(logoPath, \"\\\" alt=\\\"Recipedio Logo\\\" />\\n            <p>Recipedio</p>\\n          </a>\\n        </div>\\n        <ul class=\\\"nav__links\\\">\\n          <li class=\\\"nav__item\\\">\\n            <a href=\\\"#home\\\" class=\\\"nav__link\\\">Home</a>\\n          </li>\\n          <li class=\\\"nav__item\\\">\\n            <a href=\\\"#recipe\\\" class=\\\"nav__link\\\">Recipe</a>\\n          </li>\\n          <li class=\\\"nav__item\\\">\\n            <a href=\\\"#community\\\" class=\\\"nav__link\\\">Community</a>\\n          </li>\\n          <li class=\\\"nav__item\\\">\\n            <a href=\\\"#about\\\" class=\\\"nav__link\\\">About Us</a>\\n          </li>\\n        </ul>\\n        <div class=\\\"nav__auth\\\">\\n          <input type=\\\"text\\\" placeholder=\\\"Search...\\\" class=\\\"nav__search-box\\\" />\\n          <img class=\\\"nav__search-image\\\" src=\\\"\").concat(searchIconPath, \"\\\" alt=\\\"Search Icon\\\" />\\n          <button class=\\\"nav__login-btn\\\">\\n            <img src=\\\"\").concat(userIconPath, \"\\\" alt=\\\"User Icon\\\" />\\n          </button>\\n        </div>\\n      </nav>\\n      <div class=\\\"hero\\\">\\n        <div class=\\\"hero__content\\\">\\n          <h1>Cooking Made Fun and Easy: Unleash Your Inner Chef</h1>\\n          <p>Discover more than <span>10,000 recipes</span> at your fingertips. Find the easiest way to cook with the best recipes!</p>\\n          <a href=\\\"#explore-recipes\\\" class=\\\"hero__btn\\\">Explore Recipes</a>\\n        </div>\\n        <div class=\\\"hero__images\\\">\\n          <img src=\\\"\").concat(heroImagePath, \"\\\" alt=\\\"Hero Image\\\" class=\\\"hero__image\\\" />\\n          <img src=\\\"\").concat(tomatoImagePath, \"\\\" alt=\\\"Tomato Image\\\" class=\\\"hero__image-tomato\\\" />\\n        </div>\\n      </div>\\n    </header>\\n  \");\n}\n\n//# sourceURL=webpack://webpack-latest/./src/components/headerComponent/headerComponent.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ headerComponent)\n/* harmony export */ });\n/* harmony import */ var _headerComponent_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./headerComponent.scss */ \"./src/components/headerComponent/headerComponent.scss\");\n\nvar logoPath = __webpack_require__(/*! ../../images/logo.png */ \"./src/images/logo.png\");\nvar searchIconPath = __webpack_require__(/*! ../../images/icons/search.png */ \"./src/images/icons/search.png\");\nvar userIconPath = __webpack_require__(/*! ../../images/icons/user.png */ \"./src/images/icons/user.png\");\nvar heroImagePath = __webpack_require__(/*! ../../images/hero-image.png */ \"./src/images/hero-image.png\");\nvar tomatoImagePath = __webpack_require__(/*! ../../images/tomato.png */ \"./src/images/tomato.png\");\nfunction headerComponent() {\n  return \"\\n    <header class=\\\"header\\\">\\n      <nav class=\\\"nav\\\">\\n        <div class=\\\"nav__logo\\\">\\n          <a href=\\\"#\\\" class=\\\"nav__logo-link\\\">\\n            <img src=\\\"\".concat(logoPath, \"\\\" alt=\\\"Recipedio Logo\\\" />\\n            <p>Recipedio</p>\\n          </a>\\n        </div>\\n        <ul class=\\\"nav__links\\\">\\n          <li class=\\\"nav__item\\\">\\n            <a href=\\\"#home\\\" class=\\\"nav__link\\\">Home</a>\\n          </li>\\n          <li class=\\\"nav__item\\\">\\n            <a href=\\\"#recipe\\\" class=\\\"nav__link\\\">Recipe</a>\\n          </li>\\n          <li class=\\\"nav__item\\\">\\n            <a href=\\\"#community\\\" class=\\\"nav__link\\\">Community</a>\\n          </li>\\n          <li class=\\\"nav__item\\\">\\n            <a href=\\\"#about\\\" class=\\\"nav__link\\\">About Us</a>\\n          </li>\\n        </ul>\\n        <div class=\\\"nav__auth\\\">\\n          <input type=\\\"text\\\" placeholder=\\\"Search...\\\" class=\\\"nav__search-box\\\" />\\n          <img class=\\\"nav__search-image\\\" src=\\\"\").concat(searchIconPath, \"\\\" alt=\\\"Search Icon\\\" />\\n          <button class=\\\"nav__login-btn\\\">\\n            <img src=\\\"\").concat(userIconPath, \"\\\" alt=\\\"User Icon\\\" />\\n          </button>\\n        </div>\\n      </nav>\\n      <div class=\\\"hero\\\">\\n        <div class=\\\"hero__content\\\">\\n          <h1>Cooking Made Fun and Easy: Unleash Your Inner Chef</h1>\\n          <p>Discover more than <span>10,000 recipes</span> at your fingertips. Find the easiest way to cook with the best recipes!</p>\\n          <a href=\\\"#explore-recipes\\\" class=\\\"hero__btn\\\">Explore Recipes</a>\\n        </div>\\n        <div class=\\\"hero__images\\\">\\n          <img src=\\\"\").concat(heroImagePath, \"\\\" alt=\\\"Hero Image\\\" class=\\\"hero__image\\\" />\\n          <img src=\\\"\").concat(tomatoImagePath, \"\\\" alt=\\\"Tomato Image\\\" class=\\\"hero__image-tomato\\\" />\\n        </div>\\n      </div>\\n    </header>\\n  \");\n}\n\n//# sourceURL=webpack://webpack-latest/./src/components/headerComponent/headerComponent.js?");
 
 /***/ }),
 
@@ -115,7 +115,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ renderCommunity)\n/* harmony export */ });\n/* harmony import */ var _components_comunity_communityComponent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../components/comunity/communityComponent */ \"./src/components/comunity/communityComponent.js\");\n/* harmony import */ var _components_comunity_rewievData__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/comunity/rewievData */ \"./src/components/comunity/rewievData.js\");\n\n\nfunction renderCommunity() {\n  var community = document.querySelector(\"#community\");\n  if (community) {\n    community.innerHTML = \"\";\n    community.innerHTML = (0,_components_comunity_communityComponent__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(_components_comunity_rewievData__WEBPACK_IMPORTED_MODULE_1__.rewiev);\n  } else {\n    console.error(\"Community section was not found\");\n  }\n}\n\n//# sourceURL=webpack://webpack-latest/./src/modules/ui/renderCommunity.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ renderCommunity)\n/* harmony export */ });\n/* harmony import */ var _components_community_communityComponent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../components/community/communityComponent */ \"./src/components/community/communityComponent.js\");\n/* harmony import */ var _components_community_rewievData__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/community/rewievData */ \"./src/components/community/rewievData.js\");\n\n\nfunction renderCommunity() {\n  var community = document.querySelector(\"#community\");\n  if (community) {\n    community.innerHTML = \"\";\n    community.innerHTML = (0,_components_community_communityComponent__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(_components_community_rewievData__WEBPACK_IMPORTED_MODULE_1__.rewiev);\n  } else {\n    console.error(\"Community section was not found\");\n  }\n}\n\n//# sourceURL=webpack://webpack-latest/./src/modules/ui/renderCommunity.js?");
 
 /***/ }),
 
@@ -521,14 +521,91 @@ eval("module.exports = __webpack_require__.p + \"images/2fb1fa78005f5523a993.png
 
 /***/ }),
 
-/***/ "./src/images/difficulty.png":
-/*!***********************************!*\
-  !*** ./src/images/difficulty.png ***!
-  \***********************************/
+/***/ "./src/images/community/fresh-garden-salad.png":
+/*!*****************************************************!*\
+  !*** ./src/images/community/fresh-garden-salad.png ***!
+  \*****************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"images/42c950d94356fc2434c4.png\";\n\n//# sourceURL=webpack://webpack-latest/./src/images/difficulty.png?");
+eval("module.exports = __webpack_require__.p + \"images/141cc1954c04e06cd362.png\";\n\n//# sourceURL=webpack://webpack-latest/./src/images/community/fresh-garden-salad.png?");
+
+/***/ }),
+
+/***/ "./src/images/community/roasted-chicken.png":
+/*!**************************************************!*\
+  !*** ./src/images/community/roasted-chicken.png ***!
+  \**************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/f729a6fcb367eb6eb497.png\";\n\n//# sourceURL=webpack://webpack-latest/./src/images/community/roasted-chicken.png?");
+
+/***/ }),
+
+/***/ "./src/images/community/spaghetti.png":
+/*!********************************************!*\
+  !*** ./src/images/community/spaghetti.png ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/6c80243ff54938c4a434.png\";\n\n//# sourceURL=webpack://webpack-latest/./src/images/community/spaghetti.png?");
+
+/***/ }),
+
+/***/ "./src/images/community/user/user1.png":
+/*!*********************************************!*\
+  !*** ./src/images/community/user/user1.png ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/7b2938e91881d893979d.png\";\n\n//# sourceURL=webpack://webpack-latest/./src/images/community/user/user1.png?");
+
+/***/ }),
+
+/***/ "./src/images/community/user/user2.png":
+/*!*********************************************!*\
+  !*** ./src/images/community/user/user2.png ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/76add81eae85417504b0.png\";\n\n//# sourceURL=webpack://webpack-latest/./src/images/community/user/user2.png?");
+
+/***/ }),
+
+/***/ "./src/images/community/user/user3.png":
+/*!*********************************************!*\
+  !*** ./src/images/community/user/user3.png ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/8a5479ed3eff8f41badf.png\";\n\n//# sourceURL=webpack://webpack-latest/./src/images/community/user/user3.png?");
+
+/***/ }),
+
+/***/ "./src/images/community/user/user4.png":
+/*!*********************************************!*\
+  !*** ./src/images/community/user/user4.png ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/01b023082d7f8379133e.png\";\n\n//# sourceURL=webpack://webpack-latest/./src/images/community/user/user4.png?");
+
+/***/ }),
+
+/***/ "./src/images/community/vegetable-pot-pie.png":
+/*!****************************************************!*\
+  !*** ./src/images/community/vegetable-pot-pie.png ***!
+  \****************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/45b4947dade4b8990d4f.png\";\n\n//# sourceURL=webpack://webpack-latest/./src/images/community/vegetable-pot-pie.png?");
 
 /***/ }),
 
@@ -543,6 +620,72 @@ eval("module.exports = __webpack_require__.p + \"images/46efb233b932bcc385f3.png
 
 /***/ }),
 
+/***/ "./src/images/icons/difficulty.png":
+/*!*****************************************!*\
+  !*** ./src/images/icons/difficulty.png ***!
+  \*****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/42c950d94356fc2434c4.png\";\n\n//# sourceURL=webpack://webpack-latest/./src/images/icons/difficulty.png?");
+
+/***/ }),
+
+/***/ "./src/images/icons/preperation-time.png":
+/*!***********************************************!*\
+  !*** ./src/images/icons/preperation-time.png ***!
+  \***********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/85e7197d66d351c203ab.png\";\n\n//# sourceURL=webpack://webpack-latest/./src/images/icons/preperation-time.png?");
+
+/***/ }),
+
+/***/ "./src/images/icons/search.png":
+/*!*************************************!*\
+  !*** ./src/images/icons/search.png ***!
+  \*************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/7a28b97ed7fccf5bb3a7.png\";\n\n//# sourceURL=webpack://webpack-latest/./src/images/icons/search.png?");
+
+/***/ }),
+
+/***/ "./src/images/icons/servings.png":
+/*!***************************************!*\
+  !*** ./src/images/icons/servings.png ***!
+  \***************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/2450c31b2435b840f6b8.png\";\n\n//# sourceURL=webpack://webpack-latest/./src/images/icons/servings.png?");
+
+/***/ }),
+
+/***/ "./src/images/icons/star.png":
+/*!***********************************!*\
+  !*** ./src/images/icons/star.png ***!
+  \***********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/e289d075107f365a5112.png\";\n\n//# sourceURL=webpack://webpack-latest/./src/images/icons/star.png?");
+
+/***/ }),
+
+/***/ "./src/images/icons/user.png":
+/*!***********************************!*\
+  !*** ./src/images/icons/user.png ***!
+  \***********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/2dd46b035cfe25e50155.png\";\n\n//# sourceURL=webpack://webpack-latest/./src/images/icons/user.png?");
+
+/***/ }),
+
 /***/ "./src/images/logo.png":
 /*!*****************************!*\
   !*** ./src/images/logo.png ***!
@@ -554,39 +697,6 @@ eval("module.exports = __webpack_require__.p + \"images/0803f59d18032e072522.png
 
 /***/ }),
 
-/***/ "./src/images/preperation-time.png":
-/*!*****************************************!*\
-  !*** ./src/images/preperation-time.png ***!
-  \*****************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-eval("module.exports = __webpack_require__.p + \"images/85e7197d66d351c203ab.png\";\n\n//# sourceURL=webpack://webpack-latest/./src/images/preperation-time.png?");
-
-/***/ }),
-
-/***/ "./src/images/search.png":
-/*!*******************************!*\
-  !*** ./src/images/search.png ***!
-  \*******************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-eval("module.exports = __webpack_require__.p + \"images/7a28b97ed7fccf5bb3a7.png\";\n\n//# sourceURL=webpack://webpack-latest/./src/images/search.png?");
-
-/***/ }),
-
-/***/ "./src/images/servings.png":
-/*!*********************************!*\
-  !*** ./src/images/servings.png ***!
-  \*********************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-eval("module.exports = __webpack_require__.p + \"images/2450c31b2435b840f6b8.png\";\n\n//# sourceURL=webpack://webpack-latest/./src/images/servings.png?");
-
-/***/ }),
-
 /***/ "./src/images/tomato.png":
 /*!*******************************!*\
   !*** ./src/images/tomato.png ***!
@@ -595,17 +705,6 @@ eval("module.exports = __webpack_require__.p + \"images/2450c31b2435b840f6b8.png
 
 "use strict";
 eval("module.exports = __webpack_require__.p + \"images/28560370bd19c9488826.png\";\n\n//# sourceURL=webpack://webpack-latest/./src/images/tomato.png?");
-
-/***/ }),
-
-/***/ "./src/images/user.png":
-/*!*****************************!*\
-  !*** ./src/images/user.png ***!
-  \*****************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-eval("module.exports = __webpack_require__.p + \"images/2dd46b035cfe25e50155.png\";\n\n//# sourceURL=webpack://webpack-latest/./src/images/user.png?");
 
 /***/ })
 
@@ -697,7 +796,7 @@ eval("module.exports = __webpack_require__.p + \"images/2dd46b035cfe25e50155.png
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("13c74974bcd82a9b22ee")
+/******/ 		__webpack_require__.h = () => ("ef13fe1a36d68a968f2f")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */

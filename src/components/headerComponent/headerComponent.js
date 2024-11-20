@@ -1,7 +1,7 @@
 import "./headerComponent.scss";
 const logoPath = require("../../images/logo.png");
-const searchIconPath = require("../../images/search.png");
-const userIconPath = require("../../images/user.png");
+const searchIconPath = require("../../images/icons/search.png");
+const userIconPath = require("../../images/icons/user.png");
 const heroImagePath = require("../../images/hero-image.png");
 const tomatoImagePath = require("../../images/tomato.png");
 

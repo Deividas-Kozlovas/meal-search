@@ -1,7 +1,7 @@
 import "./discoverComponent.scss";
-const prepTime = require("../../images/preperation-time.png");
-const servings = require("../../images/servings.png");
-const difficulty = require("../../images/difficulty.png");
+const prepTime = require("../../images/icons/preperation-time.png");
+const servings = require("../../images/icons/servings.png");
+const difficulty = require("../../images/icons/difficulty.png");
 
 export default function discoverComponent(meals) {
   return `

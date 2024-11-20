@@ -1,5 +1,5 @@
-import communityComponent from "../../components/comunity/communityComponent";
-import { rewiev } from "../../components/comunity/rewievData";
+import communityComponent from "../../components/community/communityComponent";
+import { rewiev } from "../../components/community/rewievData";
 
 export default function renderCommunity() {
   const community = document.querySelector("#community");
