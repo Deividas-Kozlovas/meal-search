@@ -27,7 +27,7 @@ eval("\n\nmodule.exports = ansiHTML\n\n// Reference to https://github.com/sindre
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_ui_renderDiscover__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/ui/renderDiscover */ \"./src/modules/ui/renderDiscover.js\");\n/* harmony import */ var _modules_ui_renderHeader__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/ui/renderHeader */ \"./src/modules/ui/renderHeader.js\");\n/* harmony import */ var _modules_ui_renderAbout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/ui/renderAbout */ \"./src/modules/ui/renderAbout.js\");\n/* harmony import */ var _scss_style_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./scss/style.scss */ \"./src/scss/style.scss\");\n\n\n\n\n(0,_modules_ui_renderHeader__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n(0,_modules_ui_renderDiscover__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n(0,_modules_ui_renderAbout__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n\n//# sourceURL=webpack://webpack-latest/./src/app.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_ui_renderDiscover__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/ui/renderDiscover */ \"./src/modules/ui/renderDiscover.js\");\n/* harmony import */ var _modules_ui_renderHeader__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/ui/renderHeader */ \"./src/modules/ui/renderHeader.js\");\n/* harmony import */ var _modules_ui_renderAbout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/ui/renderAbout */ \"./src/modules/ui/renderAbout.js\");\n/* harmony import */ var _modules_ui_renderCommunity__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/ui/renderCommunity */ \"./src/modules/ui/renderCommunity.js\");\n/* harmony import */ var _scss_style_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./scss/style.scss */ \"./src/scss/style.scss\");\n\n\n\n\n\n(0,_modules_ui_renderHeader__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n(0,_modules_ui_renderDiscover__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n(0,_modules_ui_renderAbout__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n(0,_modules_ui_renderCommunity__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\n\n//# sourceURL=webpack://webpack-latest/./src/app.js?");
 
 /***/ }),
 
@@ -39,6 +39,28 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mod
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ aboutComponent)\n/* harmony export */ });\n/* harmony import */ var _aboutComponent_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./aboutComponent.scss */ \"./src/components/about/aboutComponent.scss\");\n\nvar background = __webpack_require__(/*! ../../images/about-background.png */ \"./src/images/about-background.png\");\nvar bread = __webpack_require__(/*! ../../images/bread.png */ \"./src/images/bread.png\");\nvar avocado = __webpack_require__(/*! ../../images/avocado.png */ \"./src/images/avocado.png\");\nfunction aboutComponent() {\n  return \"\\n    <div class=\\\"about-section\\\">\\n      <div class=\\\"about-section__background\\\">\\n        <img src=\\\"\".concat(background, \"\\\" alt=\\\"Background\\\" class=\\\"about-section__background-img\\\">\\n      </div>\\n      <div class=\\\"about-section__content\\\">\\n        <h3 class=\\\"about-section__heading\\\">About Us</h3>\\n        <p class=\\\"about-section__description\\\">\\n          Our recipes are the heart and soul of our culinary community, and they reflect our commitment to providing you with memorable and delightful dining experiences.\\n        </p>\\n        <a href=\\\"#\\\" class=\\\"about-section__link\\\">Learn More</a>\\n        <div class=\\\"about-section__image\\\">\\n          <img src=\\\"\").concat(bread, \"\\\" alt=\\\"Bread\\\" class=\\\"about-section__image about-section__image--bread\\\">\\n          <img src=\\\"\").concat(avocado, \"\\\" alt=\\\"Avocado\\\" class=\\\"about-section__image about-section__image--avocado\\\">\\n        </div>\\n      </div>\\n      <div class=\\\"about-section__footer\\\">\\n        <p class=\\\"about-section__footer-text\\\">50+ Quick Food Recipes That Are Easy To Do!</p>\\n      </div>\\n    </div>\\n  \");\n}\n\n//# sourceURL=webpack://webpack-latest/./src/components/about/aboutComponent.js?");
+
+/***/ }),
+
+/***/ "./src/components/comunity/communityComponent.js":
+/*!*******************************************************!*\
+  !*** ./src/components/comunity/communityComponent.js ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ communityComponent)\n/* harmony export */ });\nfunction communityComponent(reviews) {\n  return \"\\n      <div class=\\\"community-section\\\">\\n        <h2 class=\\\"community-section__title\\\">From Our Community</h2>\\n        <div class=\\\"community-section__cards\\\">\\n          \".concat(reviews.map(function (review) {\n    return \"\\n              <div class=\\\"community-card\\\">\\n                <div class=\\\"community-card__image\\\">\\n                  <img src=\\\"\".concat(review.image, \"\\\" alt=\\\"\").concat(review.title, \"\\\" />\\n                </div>\\n                <div class=\\\"community-card__content\\\">\\n                  <h3 class=\\\"community-card__title\\\">\").concat(review.title || \"Untitled\", \"</h3>\\n                  <p class=\\\"community-card__author\\\">By \").concat(review.author || \"Anonymous\", \"</p>\\n                  <p class=\\\"community-card__description\\\">\").concat(review.description || \"No description provided.\", \"</p>\\n                </div>\\n                <div class=\\\"community-card__actions\\\">\\n                  <span class=\\\"community-card__likes\\\">\\u2764\\uFE0F \").concat(review.likes || 0, \"</span>\\n                  <span class=\\\"community-card__share\\\">\\uD83D\\uDD17 Share</span>\\n                </div>\\n              </div>\\n            \");\n  }).join(\"\"), \"\\n        </div>\\n      </div>\\n    \");\n}\n\n//# sourceURL=webpack://webpack-latest/./src/components/comunity/communityComponent.js?");
+
+/***/ }),
+
+/***/ "./src/components/comunity/rewievData.js":
+/*!***********************************************!*\
+  !*** ./src/components/comunity/rewievData.js ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   rewiev: () => (/* binding */ rewiev)\n/* harmony export */ });\nvar rewiev = [{\n  title: \"Spaghetti Bolognese\",\n  author: \"Lady Rudy\",\n  description: \"I have to say, your Spaghetti Bolognese recipe is nothing short of amazing! I've always been a fan of Italian cuisine, but I was a bit intimidated by the idea of making this classic at home.\",\n  image: \"spaghetti.jpg\",\n  shares: 0\n}, {\n  title: \"Roasted Chicken\",\n  author: \"Emily Rose\",\n  description: \"I've always been a bit hesitant to roast a whole chicken, fearing it might be too complicated, but your recipe changed that for me. The instructions were so clear and easy to follow.\",\n  image: \"chicken.jpg\",\n  likes: 5,\n  shares: 0\n}, {\n  title: \"Vegetable Pot Pie\",\n  author: \"Susan H\",\n  description: \"I've always been a fan of hearty comfort food, and the 'Ultimate Vegetable Pot Pie' recipe on this platform completely exceeded my expectations.\",\n  image: \"potpie.jpg\",\n  likes: 3,\n  shares: 0\n}, {\n  title: \"Fresh Garden Salad\",\n  author: \"Lilac Laura\",\n  description: \"I've always considered myself a salad enthusiast, and this salad recipe is nothing short of a culinary masterpiece and has taken my love for greens to a whole new level.\",\n  image: \"salad.jpg\",\n  likes: 1,\n  shares: 0\n}];\n\n//# sourceURL=webpack://webpack-latest/./src/components/comunity/rewievData.js?");
 
 /***/ }),
 
@@ -83,6 +105,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ renderAbout)\n/* harmony export */ });\n/* harmony import */ var _components_about_aboutComponent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../components/about/aboutComponent */ \"./src/components/about/aboutComponent.js\");\n\nfunction renderAbout() {\n  var about = document.querySelector(\"#about\");\n  if (about) {\n    about.innerHTML = \"\";\n    about.innerHTML = (0,_components_about_aboutComponent__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n  } else {\n    console.error(\"About section was not found\");\n  }\n}\n\n//# sourceURL=webpack://webpack-latest/./src/modules/ui/renderAbout.js?");
+
+/***/ }),
+
+/***/ "./src/modules/ui/renderCommunity.js":
+/*!*******************************************!*\
+  !*** ./src/modules/ui/renderCommunity.js ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ renderCommunity)\n/* harmony export */ });\n/* harmony import */ var _components_comunity_communityComponent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../components/comunity/communityComponent */ \"./src/components/comunity/communityComponent.js\");\n/* harmony import */ var _components_comunity_rewievData__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/comunity/rewievData */ \"./src/components/comunity/rewievData.js\");\n\n\nfunction renderCommunity() {\n  var community = document.querySelector(\"#community\");\n  if (community) {\n    community.innerHTML = \"\";\n    community.innerHTML = (0,_components_comunity_communityComponent__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(_components_comunity_rewievData__WEBPACK_IMPORTED_MODULE_1__.rewiev);\n  } else {\n    console.error(\"Community section was not found\");\n  }\n}\n\n//# sourceURL=webpack://webpack-latest/./src/modules/ui/renderCommunity.js?");
 
 /***/ }),
 
@@ -192,7 +225,7 @@ eval("\n\n/* eslint-disable */\n\n/**\n * @param {string[]} pathComponents\n * @
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n    if(true) {\n      (function() {\n        var localsJsonString = undefined;\n        // 1732042308608\n        var cssReload = __webpack_require__(/*! ../../../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ \"./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js\")(module.id, {});\n        // only invalidate when locals change\n        if (\n          module.hot.data &&\n          module.hot.data.value &&\n          module.hot.data.value !== localsJsonString\n        ) {\n          module.hot.invalidate();\n        } else {\n          module.hot.accept();\n        }\n        module.hot.dispose(function(data) {\n          data.value = localsJsonString;\n          cssReload();\n        });\n      })();\n    }\n  \n\n//# sourceURL=webpack://webpack-latest/./src/components/about/aboutComponent.scss?");
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n    if(true) {\n      (function() {\n        var localsJsonString = undefined;\n        // 1732097339007\n        var cssReload = __webpack_require__(/*! ../../../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ \"./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js\")(module.id, {});\n        // only invalidate when locals change\n        if (\n          module.hot.data &&\n          module.hot.data.value &&\n          module.hot.data.value !== localsJsonString\n        ) {\n          module.hot.invalidate();\n        } else {\n          module.hot.accept();\n        }\n        module.hot.dispose(function(data) {\n          data.value = localsJsonString;\n          cssReload();\n        });\n      })();\n    }\n  \n\n//# sourceURL=webpack://webpack-latest/./src/components/about/aboutComponent.scss?");
 
 /***/ }),
 
@@ -203,7 +236,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n    if(true) {\n      (function() {\n        var localsJsonString = undefined;\n        // 1732042309719\n        var cssReload = __webpack_require__(/*! ../../../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ \"./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js\")(module.id, {});\n        // only invalidate when locals change\n        if (\n          module.hot.data &&\n          module.hot.data.value &&\n          module.hot.data.value !== localsJsonString\n        ) {\n          module.hot.invalidate();\n        } else {\n          module.hot.accept();\n        }\n        module.hot.dispose(function(data) {\n          data.value = localsJsonString;\n          cssReload();\n        });\n      })();\n    }\n  \n\n//# sourceURL=webpack://webpack-latest/./src/components/discover/discoverComponent.scss?");
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n    if(true) {\n      (function() {\n        var localsJsonString = undefined;\n        // 1732097130666\n        var cssReload = __webpack_require__(/*! ../../../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ \"./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js\")(module.id, {});\n        // only invalidate when locals change\n        if (\n          module.hot.data &&\n          module.hot.data.value &&\n          module.hot.data.value !== localsJsonString\n        ) {\n          module.hot.invalidate();\n        } else {\n          module.hot.accept();\n        }\n        module.hot.dispose(function(data) {\n          data.value = localsJsonString;\n          cssReload();\n        });\n      })();\n    }\n  \n\n//# sourceURL=webpack://webpack-latest/./src/components/discover/discoverComponent.scss?");
 
 /***/ }),
 
@@ -214,7 +247,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n    if(true) {\n      (function() {\n        var localsJsonString = undefined;\n        // 1732034711351\n        var cssReload = __webpack_require__(/*! ../../../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ \"./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js\")(module.id, {});\n        // only invalidate when locals change\n        if (\n          module.hot.data &&\n          module.hot.data.value &&\n          module.hot.data.value !== localsJsonString\n        ) {\n          module.hot.invalidate();\n        } else {\n          module.hot.accept();\n        }\n        module.hot.dispose(function(data) {\n          data.value = localsJsonString;\n          cssReload();\n        });\n      })();\n    }\n  \n\n//# sourceURL=webpack://webpack-latest/./src/components/headerComponent/headerComponent.scss?");
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n    if(true) {\n      (function() {\n        var localsJsonString = undefined;\n        // 1732097130663\n        var cssReload = __webpack_require__(/*! ../../../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ \"./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js\")(module.id, {});\n        // only invalidate when locals change\n        if (\n          module.hot.data &&\n          module.hot.data.value &&\n          module.hot.data.value !== localsJsonString\n        ) {\n          module.hot.invalidate();\n        } else {\n          module.hot.accept();\n        }\n        module.hot.dispose(function(data) {\n          data.value = localsJsonString;\n          cssReload();\n        });\n      })();\n    }\n  \n\n//# sourceURL=webpack://webpack-latest/./src/components/headerComponent/headerComponent.scss?");
 
 /***/ }),
 
@@ -225,7 +258,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n    if(true) {\n      (function() {\n        var localsJsonString = undefined;\n        // 1732037019070\n        var cssReload = __webpack_require__(/*! ../../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ \"./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js\")(module.id, {});\n        // only invalidate when locals change\n        if (\n          module.hot.data &&\n          module.hot.data.value &&\n          module.hot.data.value !== localsJsonString\n        ) {\n          module.hot.invalidate();\n        } else {\n          module.hot.accept();\n        }\n        module.hot.dispose(function(data) {\n          data.value = localsJsonString;\n          cssReload();\n        });\n      })();\n    }\n  \n\n//# sourceURL=webpack://webpack-latest/./src/scss/style.scss?");
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n    if(true) {\n      (function() {\n        var localsJsonString = undefined;\n        // 1732097130520\n        var cssReload = __webpack_require__(/*! ../../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ \"./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js\")(module.id, {});\n        // only invalidate when locals change\n        if (\n          module.hot.data &&\n          module.hot.data.value &&\n          module.hot.data.value !== localsJsonString\n        ) {\n          module.hot.invalidate();\n        } else {\n          module.hot.accept();\n        }\n        module.hot.dispose(function(data) {\n          data.value = localsJsonString;\n          cssReload();\n        });\n      })();\n    }\n  \n\n//# sourceURL=webpack://webpack-latest/./src/scss/style.scss?");
 
 /***/ }),
 
@@ -664,7 +697,7 @@ eval("module.exports = __webpack_require__.p + \"images/2dd46b035cfe25e50155.png
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("e98adc52f7d63c6f2a6c")
+/******/ 		__webpack_require__.h = () => ("13c74974bcd82a9b22ee")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
