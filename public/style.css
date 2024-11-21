@@ -528,7 +528,101 @@
 /*!*******************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/mobileApp/mobileAppComponent.scss ***!
   \*******************************************************************************************************************************************/
+.aplication {
+  padding: 2rem;
+  background-color: #046e1b;
+  position: relative;
+  margin: 0 31px;
+  padding-left: 100px;
+  border-radius: 20px;
+}
+.aplication__text {
+  position: relative;
+  z-index: 2;
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #f3f3f3;
+  max-width: 70%;
+}
+.aplication__image-container {
+  z-index: 1;
+  margin-bottom: 2rem;
+  position: absolute;
+  right: 0;
+  top: 85px;
+}
+.aplication__image-container__image {
+  max-width: 100%;
+}
+.aplication__buttons {
+  display: flex;
+  justify-content: start;
+  gap: 1rem;
+}
+.aplication__button {
+  display: inline-block;
+  padding: clamp(12px, 2vw, 20px) clamp(20px, 4vw, 40px);
+  background-color: #f79f1a;
+  color: #f3f3f3;
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: clamp(1.25rem, 1.5vw, 1.4rem);
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  display: flex;
+}
+.aplication__button:hover {
+  background-color: #fe5e54;
+}
+.aplication__button:hover {
+  transform: translateY(-3px);
+}
+.aplication__button-icon {
+  height: 40px;
+  width: 40px;
+}
+.aplication__button-text {
+  color: #f3f3f3;
+  padding-left: 10px;
+}
+.aplication__button-text p {
+  margin: 0;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+.aplication__button-text span {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.aplication__button--apple {
+  border-color: #000;
+}
+.aplication__button--android {
+  border-color: #0f9d58;
+}
 
+@media (max-width: 1450px) {
+  .aplication {
+    padding-left: 30px;
+  }
+  .aplication__text {
+    max-width: 100%;
+    background-color: rgba(0, 0, 0, 0.404);
+    padding: 50px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+  }
+}
+@media (max-width: 680px) {
+  .aplication__buttons {
+    flex-direction: column;
+  }
+  .aplication__image-container {
+    display: none;
+  }
+}
 /*!**************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/style.scss ***!
   \**************************************************************************************************************/

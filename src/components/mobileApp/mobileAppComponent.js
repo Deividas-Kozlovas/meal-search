@@ -9,9 +9,6 @@ export default function mobileAppComponent() {
       <p class="aplication__text">
         Embrace the joy of cooking with our app! Get it on your iPhone or Android. Your kitchen adventure begins now!
       </p>
-      <div class="aplication__image-container">
-        <img src="${phones}" alt="Preview of app on phones" class="aplication__image" />
-      </div>
       <div class="aplication__buttons">
         <a href="#" class="aplication__button aplication__button--apple">
           <img src="${apple}" alt="Apple logo" class="aplication__button-icon" />
@@ -27,6 +24,9 @@ export default function mobileAppComponent() {
             <span>Google Play</span>
           </div>
         </a>
+         <div class="aplication__image-container">
+        <img src="${phones}" alt="Preview of app on phones" class="aplication__image" />
+      </div>
       </div>
     </div>
   `;

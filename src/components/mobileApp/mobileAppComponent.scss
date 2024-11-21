@@ -1,0 +1,103 @@
+@use "../../scss/variables.scss" as var;
+@use "../../scss//mixins.scss" as mixin;
+
+.aplication {
+  padding: 2rem;
+  background-color: var.$green-color;
+  position: relative;
+  margin: 0 31px;
+  padding-left: 100px;
+  border-radius: 20px;
+
+  &__text {
+    position: relative;
+
+    z-index: 2;
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: var.$primary-color;
+    max-width: 70%;
+  }
+
+  &__image-container {
+    z-index: 1;
+    margin-bottom: 2rem;
+    position: absolute;
+    right: 0;
+    top: 85px;
+
+    &__image {
+      max-width: 100%;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: start;
+    gap: 1rem;
+  }
+
+  &__button {
+    @include mixin.primary-button;
+    display: flex;
+
+    &:hover {
+      transform: translateY(-3px);
+    }
+
+    &-icon {
+      height: 40px;
+      width: 40px;
+    }
+
+    &-text {
+      color: var.$primary-color;
+      padding-left: 10px;
+
+      p {
+        margin: 0;
+        font-weight: 500;
+        font-size: 0.9rem;
+      }
+
+      span {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+    }
+
+    &--apple {
+      border-color: #000;
+    }
+
+    &--android {
+      border-color: #0f9d58;
+    }
+  }
+}
+
+@media (max-width: 1450px) {
+  .aplication {
+    padding-left: 30px;
+
+    &__text {
+      max-width: 100%;
+      background-color: rgba(0, 0, 0, 0.404);
+      padding: 50px;
+      margin-bottom: 30px;
+      border-radius: 20px;
+    }
+  }
+}
+
+@media (max-width: 680px) {
+  .aplication {
+    &__buttons {
+      flex-direction: column;
+    }
+    &__image-container {
+      display: none;
+    }
+  }
+}
