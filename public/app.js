@@ -27,7 +27,7 @@ eval("\n\nmodule.exports = ansiHTML\n\n// Reference to https://github.com/sindre
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_ui_renderDiscover__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/ui/renderDiscover */ \"./src/modules/ui/renderDiscover.js\");\n/* harmony import */ var _modules_ui_renderHeader__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/ui/renderHeader */ \"./src/modules/ui/renderHeader.js\");\n/* harmony import */ var _modules_ui_renderAbout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/ui/renderAbout */ \"./src/modules/ui/renderAbout.js\");\n/* harmony import */ var _modules_ui_renderCommunity__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/ui/renderCommunity */ \"./src/modules/ui/renderCommunity.js\");\n/* harmony import */ var _scss_style_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./scss/style.scss */ \"./src/scss/style.scss\");\n\n\n\n\n\n(0,_modules_ui_renderHeader__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n(0,_modules_ui_renderDiscover__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n(0,_modules_ui_renderAbout__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n(0,_modules_ui_renderCommunity__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\n\n//# sourceURL=webpack://webpack-latest/./src/app.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_ui_renderDiscover__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/ui/renderDiscover */ \"./src/modules/ui/renderDiscover.js\");\n/* harmony import */ var _modules_ui_renderHeader__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/ui/renderHeader */ \"./src/modules/ui/renderHeader.js\");\n/* harmony import */ var _modules_ui_renderAbout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/ui/renderAbout */ \"./src/modules/ui/renderAbout.js\");\n/* harmony import */ var _modules_ui_renderCommunity__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/ui/renderCommunity */ \"./src/modules/ui/renderCommunity.js\");\n/* harmony import */ var _modules_ui_renderAplication__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/ui/renderAplication */ \"./src/modules/ui/renderAplication.js\");\n/* harmony import */ var _scss_style_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./scss/style.scss */ \"./src/scss/style.scss\");\n\n\n\n\n\n\n(0,_modules_ui_renderHeader__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n(0,_modules_ui_renderDiscover__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n(0,_modules_ui_renderAbout__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n(0,_modules_ui_renderCommunity__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\n(0,_modules_ui_renderAplication__WEBPACK_IMPORTED_MODULE_4__[\"default\"])();\n\n//# sourceURL=webpack://webpack-latest/./src/app.js?");
 
 /***/ }),
 
@@ -86,6 +86,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/components/mobileApp/mobileAppComponent.js":
+/*!********************************************************!*\
+  !*** ./src/components/mobileApp/mobileAppComponent.js ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ mobileAppComponent)\n/* harmony export */ });\n/* harmony import */ var _mobileAppComponent_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./mobileAppComponent.scss */ \"./src/components/mobileApp/mobileAppComponent.scss\");\n\nvar apple = __webpack_require__(/*! ../../images/icons/apple.png */ \"./src/images/icons/apple.png\");\nvar android = __webpack_require__(/*! ../../images/icons/android.png */ \"./src/images/icons/android.png\");\nvar phones = __webpack_require__(/*! ../../images/phones.png */ \"./src/images/phones.png\");\nfunction mobileAppComponent() {\n  return \"\\n    <div class=\\\"aplication\\\">\\n      <p class=\\\"aplication__text\\\">\\n        Embrace the joy of cooking with our app! Get it on your iPhone or Android. Your kitchen adventure begins now!\\n      </p>\\n      <div class=\\\"aplication__image-container\\\">\\n        <img src=\\\"\".concat(phones, \"\\\" alt=\\\"Preview of app on phones\\\" class=\\\"aplication__image\\\" />\\n      </div>\\n      <div class=\\\"aplication__buttons\\\">\\n        <a href=\\\"#\\\" class=\\\"aplication__button aplication__button--apple\\\">\\n          <img src=\\\"\").concat(apple, \"\\\" alt=\\\"Apple logo\\\" class=\\\"aplication__button-icon\\\" />\\n          <div class=\\\"aplication__button-text\\\">\\n            <p>Download on the</p>\\n            <span>App Store</span>\\n          </div>\\n        </a>\\n        <a href=\\\"#\\\" class=\\\"aplication__button aplication__button--android\\\">\\n          <img src=\\\"\").concat(android, \"\\\" alt=\\\"Android logo\\\" class=\\\"aplication__button-icon\\\" />\\n          <div class=\\\"aplication__button-text\\\">\\n            <p>Download on the</p>\\n            <span>Google Play</span>\\n          </div>\\n        </a>\\n      </div>\\n    </div>\\n  \");\n}\n\n//# sourceURL=webpack://webpack-latest/./src/components/mobileApp/mobileAppComponent.js?");
+
+/***/ }),
+
 /***/ "./src/modules/api/getSixMeals.js":
 /*!****************************************!*\
   !*** ./src/modules/api/getSixMeals.js ***!
@@ -105,6 +116,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ renderAbout)\n/* harmony export */ });\n/* harmony import */ var _components_about_aboutComponent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../components/about/aboutComponent */ \"./src/components/about/aboutComponent.js\");\n\nfunction renderAbout() {\n  var about = document.querySelector(\"#about\");\n  if (about) {\n    about.innerHTML = \"\";\n    about.innerHTML = (0,_components_about_aboutComponent__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n  } else {\n    console.error(\"About section was not found\");\n  }\n}\n\n//# sourceURL=webpack://webpack-latest/./src/modules/ui/renderAbout.js?");
+
+/***/ }),
+
+/***/ "./src/modules/ui/renderAplication.js":
+/*!********************************************!*\
+  !*** ./src/modules/ui/renderAplication.js ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ renderMobileApp)\n/* harmony export */ });\n/* harmony import */ var _components_mobileApp_mobileAppComponent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../components/mobileApp/mobileAppComponent */ \"./src/components/mobileApp/mobileAppComponent.js\");\n\nfunction renderMobileApp() {\n  var aplication = document.querySelector(\"#mobileApp\");\n  if (aplication) {\n    aplication.innerHTML = \"\";\n    aplication.innerHTML = (0,_components_mobileApp_mobileAppComponent__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n  } else {\n    console.error(\"mobileApp section was not found\");\n  }\n}\n\n//# sourceURL=webpack://webpack-latest/./src/modules/ui/renderAplication.js?");
 
 /***/ }),
 
@@ -259,6 +281,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n    if(true) {\n      (function() {\n        var localsJsonString = undefined;\n        // 1732175428141\n        var cssReload = __webpack_require__(/*! ../../../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ \"./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js\")(module.id, {});\n        // only invalidate when locals change\n        if (\n          module.hot.data &&\n          module.hot.data.value &&\n          module.hot.data.value !== localsJsonString\n        ) {\n          module.hot.invalidate();\n        } else {\n          module.hot.accept();\n        }\n        module.hot.dispose(function(data) {\n          data.value = localsJsonString;\n          cssReload();\n        });\n      })();\n    }\n  \n\n//# sourceURL=webpack://webpack-latest/./src/components/headerComponent/headerComponent.scss?");
+
+/***/ }),
+
+/***/ "./src/components/mobileApp/mobileAppComponent.scss":
+/*!**********************************************************!*\
+  !*** ./src/components/mobileApp/mobileAppComponent.scss ***!
+  \**********************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n    if(true) {\n      (function() {\n        var localsJsonString = undefined;\n        // 1732178755651\n        var cssReload = __webpack_require__(/*! ../../../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ \"./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js\")(module.id, {});\n        // only invalidate when locals change\n        if (\n          module.hot.data &&\n          module.hot.data.value &&\n          module.hot.data.value !== localsJsonString\n        ) {\n          module.hot.invalidate();\n        } else {\n          module.hot.accept();\n        }\n        module.hot.dispose(function(data) {\n          data.value = localsJsonString;\n          cssReload();\n        });\n      })();\n    }\n  \n\n//# sourceURL=webpack://webpack-latest/./src/components/mobileApp/mobileAppComponent.scss?");
 
 /***/ }),
 
@@ -631,6 +664,28 @@ eval("module.exports = __webpack_require__.p + \"images/46efb233b932bcc385f3.png
 
 /***/ }),
 
+/***/ "./src/images/icons/android.png":
+/*!**************************************!*\
+  !*** ./src/images/icons/android.png ***!
+  \**************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/7c9440c6637465085530.png\";\n\n//# sourceURL=webpack://webpack-latest/./src/images/icons/android.png?");
+
+/***/ }),
+
+/***/ "./src/images/icons/apple.png":
+/*!************************************!*\
+  !*** ./src/images/icons/apple.png ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/6b7cb8754460dc2e8bba.png\";\n\n//# sourceURL=webpack://webpack-latest/./src/images/icons/apple.png?");
+
+/***/ }),
+
 /***/ "./src/images/icons/difficulty.png":
 /*!*****************************************!*\
   !*** ./src/images/icons/difficulty.png ***!
@@ -705,6 +760,17 @@ eval("module.exports = __webpack_require__.p + \"images/2dd46b035cfe25e50155.png
 
 "use strict";
 eval("module.exports = __webpack_require__.p + \"images/0803f59d18032e072522.png\";\n\n//# sourceURL=webpack://webpack-latest/./src/images/logo.png?");
+
+/***/ }),
+
+/***/ "./src/images/phones.png":
+/*!*******************************!*\
+  !*** ./src/images/phones.png ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/68e90314eed3659cc5ae.png\";\n\n//# sourceURL=webpack://webpack-latest/./src/images/phones.png?");
 
 /***/ }),
 
@@ -807,7 +873,7 @@ eval("module.exports = __webpack_require__.p + \"images/28560370bd19c9488826.png
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("01d1715d21d225fdb4bd")
+/******/ 		__webpack_require__.h = () => ("f96af5df10a714c11708")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
