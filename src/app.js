@@ -3,6 +3,7 @@ import renderHeader from "./modules/ui/renderHeader";
 import renderAbout from "./modules/ui/renderAbout";
 import renderCommunity from "./modules/ui/renderCommunity";
 import renderAplication from "./modules/ui/renderAplication";
+import renderFooter from "./modules/ui/renderFooter";
 import "./scss/style.scss";
 
 renderHeader();
@@ -10,3 +11,4 @@ renderDiscover();
 renderAbout();
 renderCommunity();
 renderAplication();
+renderFooter();

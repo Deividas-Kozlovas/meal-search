@@ -1,9 +1,9 @@
 import "./headerComponent.scss";
-const logoPath = require("../../images/logo.png");
-const searchIconPath = require("../../images/icons/search.png");
-const userIconPath = require("../../images/icons/user.png");
-const heroImagePath = require("../../images/hero-image.png");
-const tomatoImagePath = require("../../images/tomato.png");
+const logo = require("../../images/logo.png");
+const searchIcon = require("../../images/icons/search.png");
+const userIcon = require("../../images/icons/user.png");
+const heroImage = require("../../images/hero-image.png");
+const tomatoImage = require("../../images/tomato.png");
 
 export default function headerComponent() {
   return `
@@ -11,7 +11,7 @@ export default function headerComponent() {
       <nav class="nav">
         <div class="nav__logo">
           <a href="#" class="nav__logo-link">
-            <img src="${logoPath}" alt="Recipedio Logo" />
+            <img src="${logo}" alt="Recipedio Logo" />
             <p>Recipedio</p>
           </a>
         </div>
@@ -31,9 +31,9 @@ export default function headerComponent() {
         </ul>
         <div class="nav__auth">
           <input type="text" placeholder="Search..." class="nav__search-box" />
-          <img class="nav__search-image" src="${searchIconPath}" alt="Search Icon" />
+          <img class="nav__search-image" src="${searchIcon}" alt="Search Icon" />
           <button class="nav__login-btn">
-            <img src="${userIconPath}" alt="User Icon" />
+            <img src="${userIcon}" alt="User Icon" />
           </button>
         </div>
       </nav>
@@ -44,8 +44,8 @@ export default function headerComponent() {
           <a href="#explore-recipes" class="hero__btn">Explore Recipes</a>
         </div>
         <div class="hero__images">
-          <img src="${heroImagePath}" alt="Hero Image" class="hero__image" />
-          <img src="${tomatoImagePath}" alt="Tomato Image" class="hero__image-tomato" />
+          <img src="${heroImage}" alt="Hero Image" class="hero__image" />
+          <img src="${tomatoImage}" alt="Tomato Image" class="hero__image-tomato" />
         </div>
       </div>
     </header>
