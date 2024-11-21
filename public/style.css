@@ -424,12 +424,113 @@
     bottom: auto;
   }
 }
+/*!*******************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/community/communityComponent.scss ***!
+  \*******************************************************************************************************************************************/
+.community-section {
+  padding: 2rem;
+  background-color: #ffffff;
+}
+.community-section__title {
+  font-size: 2.75rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+.community-section__cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5rem;
+}
+
+.community-card {
+  border-radius: 10px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.community-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+}
+.community-card__user {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.community-card__user-image {
+  flex-shrink: 0;
+  margin-right: 0.75rem;
+}
+.community-card__user-image img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.community-card__user-info {
+  display: flex;
+  flex-direction: column;
+}
+.community-card__user-info .community-card__title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #222;
+  margin: 0;
+}
+.community-card__user-info .community-card__author {
+  font-size: 0.875rem;
+  color: rgb(158, 157, 157);
+  margin: 0.25rem 0 0;
+}
+.community-card__content {
+  margin-bottom: 1rem;
+}
+.community-card__content__description {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #444;
+}
+.community-card__content__rating {
+  margin-bottom: 0.5rem;
+}
+.community-card__content__rating .community-card__star {
+  width: 18px;
+  height: 18px;
+  margin-right: 0.2rem;
+}
+.community-card__meal {
+  margin-bottom: 1rem;
+}
+.community-card__meal-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.community-card__actions span {
+  cursor: pointer;
+}
+.community-card__actions span:hover {
+  color: #333;
+}
+
+@media (max-width: 1100px) {
+  .community-section__cards {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
 /*!**************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/style.scss ***!
   \**************************************************************************************************************/
 body {
   font-family: Arial, sans-serif;
-  color: #f3f3f3;
+  color: #312f2f;
   margin: 0;
   padding: 0;
 }

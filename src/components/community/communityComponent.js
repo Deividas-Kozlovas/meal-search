@@ -1,3 +1,4 @@
+import "./communityComponent.scss";
 const star = require("../../images/icons/star.png");
 
 export default function communityComponent(reviews) {
