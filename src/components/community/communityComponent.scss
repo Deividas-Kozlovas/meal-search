@@ -5,7 +5,7 @@
   background-color: #ffffff;
 
   &__title {
-    font-size: 2.75rem;
+    font-size: calc(1rem + 2vw);
     font-weight: bold;
     color: #333;
     text-align: center;
@@ -114,5 +114,11 @@
   .community-section__cards {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .community-section {
+    padding: 0;
   }
 }

@@ -262,13 +262,11 @@
     flex-direction: column;
     align-items: center;
   }
-  .header .nav__logo-link {
-    padding-left: 30px;
-  }
   .header .nav__links {
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    padding: 0;
   }
   .header .nav__auth {
     flex-direction: row;
@@ -424,6 +422,11 @@
     bottom: auto;
   }
 }
+@media (max-width: 550px) {
+  .about-section__image {
+    display: none;
+  }
+}
 /*!*******************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/community/communityComponent.scss ***!
   \*******************************************************************************************************************************************/
@@ -432,7 +435,7 @@
   background-color: #ffffff;
 }
 .community-section__title {
-  font-size: 2.75rem;
+  font-size: calc(1rem + 2vw);
   font-weight: bold;
   color: #333;
   text-align: center;
@@ -523,6 +526,11 @@
   .community-section__cards {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+}
+@media (max-width: 550px) {
+  .community-section {
+    padding: 0;
   }
 }
 /*!*******************************************************************************************************************************************!*\
@@ -616,6 +624,10 @@
   }
 }
 @media (max-width: 680px) {
+  .aplication {
+    margin: 0;
+    padding: 5px;
+  }
   .aplication__buttons {
     flex-direction: column;
   }

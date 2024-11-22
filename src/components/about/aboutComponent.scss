@@ -117,3 +117,9 @@
     bottom: auto;
   }
 }
+
+@media (max-width: 550px) {
+  .about-section__image {
+    display: none;
+  }
+}

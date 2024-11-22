@@ -93,6 +93,9 @@
 
 @media (max-width: 680px) {
   .aplication {
+    margin: 0;
+    padding: 5px;
+
     &__buttons {
       flex-direction: column;
     }

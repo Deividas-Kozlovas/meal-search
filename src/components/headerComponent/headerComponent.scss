@@ -150,14 +150,11 @@
       flex-direction: column;
       align-items: center;
 
-      &__logo-link {
-        padding-left: 30px;
-      }
-
       &__links {
         flex-direction: column;
         align-items: center;
         gap: 20px;
+        padding: 0;
       }
 
       &__auth {
