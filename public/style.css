@@ -626,7 +626,172 @@
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/footer/footerComponent.scss ***!
   \*************************************************************************************************************************************/
+.footer {
+  padding: 5vw 3vw;
+  position: relative;
+}
+.footer__logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+}
+.footer__logo img {
+  height: 2rem;
+  margin-right: 1rem;
+}
+.footer__logo p {
+  font-size: 3vw;
+  color: #046e1b;
+  font-weight: bold;
+}
+.footer__left {
+  display: flex;
+}
+.footer__salad, .footer__eggplant, .footer__eggs {
+  position: absolute;
+}
+.footer__salad {
+  left: 40%;
+}
+.footer__eggplant {
+  left: 55%;
+  bottom: 10vh;
+}
+.footer__eggs {
+  left: 90%;
+}
+.footer__menu {
+  display: flex;
+}
+.footer__section p {
+  font-weight: bold;
+  font-size: 2.5rem;
+  padding-right: 5vw;
+}
+.footer__section ul {
+  list-style-type: none;
+  padding: 0;
+}
+.footer__section ul li {
+  line-height: 2rem;
+}
+.footer__section ul li a {
+  color: #312f2f;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+.footer__right {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  width: 40%;
+}
+.footer__right p {
+  font-size: 2.5vw;
+  font-weight: bold;
+  padding-bottom: 2vh;
+}
+.footer__right form {
+  border-bottom: 2px solid #312f2f;
+  padding-bottom: 10px;
+  position: relative;
+}
+.footer__right form input {
+  border: 0;
+  font-size: 2rem;
+  position: absolute;
+  bottom: 10px;
+  background-color: transparent;
+  width: 100%;
+  padding: 1rem;
+}
+.footer__right form button {
+  display: inline-block;
+  padding: clamp(12px, 2vw, 20px) clamp(20px, 4vw, 40px);
+  background-color: #f79f1a;
+  color: #f3f3f3;
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: clamp(1.25rem, 1.5vw, 1.4rem);
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  border: 0;
+  float: right;
+}
+.footer__right form button:hover {
+  background-color: #fe5e54;
+}
 
+@media (max-width: 1500px) {
+  .footer__left {
+    flex-direction: column;
+    margin-right: auto;
+  }
+  .footer__menu {
+    flex-direction: row;
+  }
+  .footer__section {
+    width: 100%;
+  }
+  .footer__right {
+    margin-left: 0;
+    width: 100%;
+  }
+  .footer__salad, .footer__eggplant, .footer__eggs {
+    display: none;
+  }
+}
+@media (max-width: 750px) {
+  .footer__menu {
+    flex-direction: column;
+  }
+  .footer__section p {
+    font-size: 2rem;
+  }
+  .footer__right {
+    width: 100%;
+  }
+  .footer__right p {
+    font-size: 2rem;
+  }
+  .footer__logo p {
+    font-size: 4vw;
+  }
+}
+@media (max-width: 550px) {
+  .footer__form {
+    display: flex;
+    flex-direction: column;
+    border-bottom: none;
+    padding-top: 0;
+  }
+  .footer__right {
+    width: 100%;
+  }
+  .footer__input {
+    position: relative !important;
+    float: none;
+    width: 100% !important;
+    padding: 1rem;
+  }
+  .footer form input {
+    font-size: 1.5rem;
+  }
+  .footer form button {
+    width: 100%;
+    text-align: center;
+    padding: 1.2rem;
+  }
+  .footer .footer__logo p {
+    font-size: 6vw;
+  }
+  .footer .footer__section p {
+    font-size: 1.8rem;
+  }
+}
 /*!**************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/style.scss ***!
   \**************************************************************************************************************/

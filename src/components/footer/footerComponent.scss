@@ -1,0 +1,201 @@
+@use "../../scss/variables.scss" as var;
+@use "../../scss/mixins.scss" as mixin;
+
+.footer {
+  padding: 5vw 3vw;
+  position: relative;
+
+  &__logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+
+    img {
+      height: 2rem;
+      margin-right: 1rem;
+    }
+
+    p {
+      font-size: 3vw;
+      color: var.$green-color;
+      font-weight: bold;
+    }
+  }
+
+  &__left {
+    display: flex;
+  }
+
+  &__salad,
+  &__eggplant,
+  &__eggs {
+    position: absolute;
+  }
+
+  &__salad {
+    left: 40%;
+  }
+
+  &__eggplant {
+    left: 55%;
+    bottom: 10vh;
+  }
+
+  &__eggs {
+    left: 90%;
+  }
+
+  &__menu {
+    display: flex;
+  }
+
+  &__section {
+    p {
+      font-weight: bold;
+      font-size: 2.5rem;
+      padding-right: 5vw;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      li {
+        line-height: 2rem;
+
+        a {
+          color: var.$secondary-color;
+          font-weight: bold;
+          text-decoration: none;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    width: 40%;
+
+    p {
+      font-size: 2.5vw;
+      font-weight: bold;
+      padding-bottom: 2vh;
+    }
+
+    form {
+      border-bottom: 2px solid var.$secondary-color;
+      padding-bottom: 10px;
+      position: relative;
+
+      input {
+        border: 0;
+        font-size: 2rem;
+        position: absolute;
+        bottom: 10px;
+        background-color: transparent;
+        width: 100%;
+        padding: 1rem;
+      }
+
+      button {
+        @include mixin.primary-button;
+        border: 0;
+        float: right;
+      }
+    }
+  }
+}
+
+@media (max-width: 1500px) {
+  .footer {
+    &__left {
+      flex-direction: column;
+      margin-right: auto;
+    }
+
+    &__menu {
+      flex-direction: row;
+    }
+
+    &__section {
+      width: 100%;
+    }
+
+    &__right {
+      margin-left: 0;
+      width: 100%;
+    }
+
+    &__salad,
+    &__eggplant,
+    &__eggs {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .footer__menu {
+    flex-direction: column;
+  }
+
+  .footer__section p {
+    font-size: 2rem;
+  }
+
+  .footer__right {
+    width: 100%;
+    p {
+      font-size: 2rem;
+    }
+  }
+
+  .footer__logo p {
+    font-size: 4vw;
+  }
+}
+
+@media (max-width: 550px) {
+  .footer {
+    &__form {
+      display: flex;
+      flex-direction: column;
+      border-bottom: none;
+      padding-top: 0;
+    }
+
+    &__right {
+      width: 100%;
+    }
+
+    &__input {
+      position: relative !important;
+      float: none;
+      width: 100% !important;
+      padding: 1rem;
+    }
+
+    form {
+      input {
+        font-size: 1.5rem;
+      }
+
+      button {
+        width: 100%;
+        text-align: center;
+        padding: 1.2rem;
+      }
+    }
+
+    .footer__logo p {
+      font-size: 6vw;
+    }
+
+    .footer__section p {
+      font-size: 1.8rem;
+    }
+  }
+}
