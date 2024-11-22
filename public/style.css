@@ -1,129 +1,16 @@
-/*!*****************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/discover/discoverComponent.scss ***!
-  \*****************************************************************************************************************************************/
-.discover__header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 100px 20px 50px 20px;
-  margin-bottom: 20px;
-}
-.discover__header .discover__title {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-.discover__header .discover__title-heading {
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  margin: 0;
-  font-weight: bold;
+/*!**************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/style.scss ***!
+  \**************************************************************************************************************/
+body {
+  font-family: Arial, sans-serif;
   color: #312f2f;
-}
-.discover__header .discover__title-description {
-  font-size: clamp(1rem, 2.5vw, 1.3rem);
-  color: rgb(158, 157, 157);
-  opacity: 0.7;
   margin: 0;
-}
-.discover__header .discover__see-all {
-  display: inline-block;
-  padding: clamp(12px, 2vw, 20px) clamp(20px, 4vw, 40px);
-  background-color: #f79f1a;
-  color: #f3f3f3;
-  text-decoration: none;
-  border-radius: 20px;
-  font-size: clamp(1.25rem, 1.5vw, 1.4rem);
-  font-weight: bold;
-  text-align: center;
-  transition: background-color 0.3s ease;
-}
-.discover__header .discover__see-all:hover {
-  background-color: #fe5e54;
-}
-.discover__recipes {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  gap: 3rem;
-}
-.discover__recipes .recipe {
-  background-color: #fff;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease;
-}
-.discover__recipes .recipe:hover {
-  transform: scale(1.02);
-}
-.discover__recipes .recipe__image {
-  position: relative;
-  width: 100%;
-  height: 400px;
-}
-.discover__recipes .recipe__image-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.discover__recipes .recipe__info {
-  position: absolute;
-  padding: 15px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  bottom: 0px;
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0.74);
-}
-.discover__recipes .recipe__info-duration, .discover__recipes .recipe__info-serving, .discover__recipes .recipe__info-difficulty {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: clamp(0.8rem, 2vw, 1rem);
-  color: #312f2f;
-  opacity: 0.8;
-}
-.discover__recipes .recipe__info-text {
-  color: #046e1b;
-  font-size: clamp(1rem, 2vw, 1.5rem);
-}
-.discover__recipes .recipe__info-icon {
-  width: 25px;
-  height: 25px;
-}
-.discover__recipes .recipe__info-text {
-  margin: 0;
-}
-.discover__recipes .recipe__details {
-  padding: 0px 0px 30px 30px;
-}
-.discover__recipes .recipe__name {
-  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
-  font-weight: bold;
-  margin-bottom: 5px;
-  color: black;
-}
-.discover__recipes .recipe__view-link {
-  font-size: clamp(0.8rem, 1.5vw, 1rem);
-  font-weight: bold;
-  color: #f79f1a;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-.discover__recipes .recipe__view-link:hover {
-  color: #fe5e54;
+  padding: 0;
 }
 
-@media (max-width: 800px) {
-  .discover__recipes {
-    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
-  }
-  .discover__header {
-    flex-direction: column;
-  }
-  .discover__see-all {
-    margin-top: 50px;
-  }
+.container {
+  width: 90%;
+  margin: 0 auto;
 }
 /*!**********************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/headerComponent/headerComponent.scss ***!
@@ -305,6 +192,133 @@
     position: relative;
     width: 50px;
     left: auto;
+  }
+}
+/*!*****************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/discover/discoverComponent.scss ***!
+  \*****************************************************************************************************************************************/
+.discover__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 20px 50px 20px;
+  margin-bottom: 20px;
+}
+.discover__header .discover__title {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.discover__header .discover__title-heading {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  margin: 0;
+  font-weight: bold;
+  color: #312f2f;
+}
+.discover__header .discover__title-description {
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  color: rgb(158, 157, 157);
+  opacity: 0.7;
+  margin: 0;
+}
+.discover__header .discover__see-all {
+  display: inline-block;
+  padding: clamp(12px, 2vw, 20px) clamp(20px, 4vw, 40px);
+  background-color: #f79f1a;
+  color: #f3f3f3;
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: clamp(1.25rem, 1.5vw, 1.4rem);
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+.discover__header .discover__see-all:hover {
+  background-color: #fe5e54;
+}
+.discover__recipes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 3rem;
+}
+.discover__recipes .recipe {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+.discover__recipes .recipe:hover {
+  transform: scale(1.02);
+}
+.discover__recipes .recipe__image {
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+.discover__recipes .recipe__image-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.discover__recipes .recipe__info {
+  position: absolute;
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  bottom: 0px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.74);
+}
+.discover__recipes .recipe__info-duration, .discover__recipes .recipe__info-serving, .discover__recipes .recipe__info-difficulty {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  color: #312f2f;
+  opacity: 0.8;
+}
+.discover__recipes .recipe__info-text {
+  color: #046e1b;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+}
+.discover__recipes .recipe__info-icon {
+  width: 25px;
+  height: 25px;
+}
+.discover__recipes .recipe__info-text {
+  margin: 0;
+}
+.discover__recipes .recipe__details {
+  padding: 0px 0px 30px 30px;
+}
+.discover__recipes .recipe__name {
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: black;
+}
+.discover__recipes .recipe__view-link {
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
+  font-weight: bold;
+  color: #f79f1a;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.discover__recipes .recipe__view-link:hover {
+  color: #fe5e54;
+}
+
+@media (max-width: 800px) {
+  .discover__recipes {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+  }
+  .discover__header {
+    flex-direction: column;
+  }
+  .discover__see-all {
+    margin-top: 50px;
   }
 }
 /*!***********************************************************************************************************************************!*\
@@ -803,18 +817,4 @@
   .footer .footer__section p {
     font-size: 1.8rem;
   }
-}
-/*!**************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/style.scss ***!
-  \**************************************************************************************************************/
-body {
-  font-family: Arial, sans-serif;
-  color: #312f2f;
-  margin: 0;
-  padding: 0;
-}
-
-.container {
-  width: 90%;
-  margin: 0 auto;
 }
