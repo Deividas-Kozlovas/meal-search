@@ -1,7 +1,7 @@
-export default function renderComponent(component, sectionId, message) {
+export default function renderPage(component, sectionId, message) {
   const renderSection = document.querySelector(sectionId);
+
   if (renderSection) {
-    renderSection.innerHTML = "";
     renderSection.innerHTML = component;
   } else {
     console.error(message);

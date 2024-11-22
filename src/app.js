@@ -1,32 +1,15 @@
 import "./scss/style.scss";
+import renderPage from "./modules/ui/renderPage";
+import routes from "./modules/utils/routes";
 
-import renderComponent from "./modules/ui/renderComponents";
-import headerComponent from "./components/headerComponent/headerComponent";
-import discoverComponent from "./components/discover/discoverComponent";
-import aboutComponent from "./components/about/aboutComponent";
-import communityComponent from "./components/community/communityComponent";
-import mobileAppComponent from "./components/mobileApp/mobileAppComponent";
-import footerComponent from "./components/footer/footerComponent";
-import getSixMeals from "./modules/api/getSixMeals";
-import { rewiev } from "./components/community/rewievData";
+async function handleRoute() {
+  const path = window.location.pathname;
 
-renderComponent(headerComponent(), "#header", "Header section was not found");
-const sixMeals = await getSixMeals();
+  const route = routes[path] || routes["/"];
 
-renderComponent(
-  discoverComponent(sixMeals),
-  "#discover",
-  "Discover section was not found"
-);
-renderComponent(aboutComponent(), "#about", "About section was not found");
-renderComponent(
-  communityComponent(rewiev),
-  "#community",
-  "Community section was not found"
-);
-renderComponent(
-  mobileAppComponent(),
-  "#mobileApp",
-  "Mobile section was not found"
-);
-renderComponent(footerComponent(), "#footer", "Footer section was not found");
+  const pageContent = await route();
+
+  renderPage(pageContent, "#app", "App container was not found");
+}
+
+handleRoute();
