@@ -1,7 +1,9 @@
-import homePage from "../pages/homePage";
+import homePage from "../../pages/homePage";
+import mealPage from "../../pages/mealPage";
 
 const routes = {
-  "/": homePage,
+  "/": homePage, // When the path is '/', render the homePage
+  "/meals": mealPage, // When the path is '/meals', render the mealPage
 };
 
 export default routes;

@@ -15,72 +15,6 @@ body {
 /*!**********************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/headerComponent/headerComponent.scss ***!
   \**********************************************************************************************************************************************/
-.header {
-  padding: 20px;
-}
-.header .nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 0px;
-}
-.header .nav__logo .nav__logo-link {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-}
-.header .nav__logo .nav__logo-link img {
-  height: clamp(20px, 2vw, 40px);
-  margin-right: 5px;
-}
-.header .nav__logo .nav__logo-link p {
-  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
-  font-weight: bold;
-  color: #046e1b;
-}
-.header .nav__links {
-  display: flex;
-  list-style: none;
-  gap: clamp(20px, 5vw, 50px);
-}
-.header .nav__links a {
-  text-decoration: none;
-  color: #312f2f;
-  font-size: clamp(1rem, 1.5vw, 1.25rem);
-  padding: 5px;
-  border-radius: 10px;
-  font-weight: bold;
-}
-.header .nav__links .nav__item__link {
-  transition: color 0.3s ease;
-}
-.header .nav__links .nav__item__link:hover {
-  color: #fe5e54;
-}
-.header .nav__auth {
-  display: flex;
-  align-items: center;
-}
-.header .nav__auth .nav__search-box {
-  padding: clamp(8px, 1vw, 12px);
-  margin-right: 15px;
-  border: 0px;
-  background-color: transparent;
-  color: #312f2f;
-  font-size: clamp(0.875rem, 1vw, 1rem);
-  border-radius: 4px;
-}
-.header .nav__auth .nav__search-image {
-  padding-right: 20px;
-}
-.header .nav__auth .nav__login-btn {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-}
-.header .nav__auth .nav__login-btn img {
-  height: clamp(20px, 2vw, 30px);
-}
 .header .hero {
   display: flex;
   flex-wrap: wrap;
@@ -817,4 +751,67 @@ body {
   .footer .footer__section p {
     font-size: 1.8rem;
   }
+}
+/*!*********************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/navigation/navigationComponent.scss ***!
+  \*********************************************************************************************************************************************/
+.navigation-container .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0px;
+}
+.navigation-container .nav__logo .nav__logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.navigation-container .nav__logo .nav__logo-link img {
+  height: clamp(20px, 2vw, 40px);
+  margin-right: 5px;
+}
+.navigation-container .nav__logo .nav__logo-link p {
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+  font-weight: bold;
+  color: #046e1b;
+}
+.navigation-container .nav__links {
+  display: flex;
+  list-style: none;
+  gap: clamp(20px, 5vw, 50px);
+}
+.navigation-container .nav__links a {
+  text-decoration: none;
+  color: #312f2f;
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  padding: 5px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+.navigation-container .nav__links a:hover {
+  color: #fe5e54;
+}
+.navigation-container .nav__auth {
+  display: flex;
+  align-items: center;
+}
+.navigation-container .nav__auth .nav__search-box {
+  padding: clamp(8px, 1vw, 12px);
+  margin-right: 15px;
+  border: 0;
+  background-color: transparent;
+  color: #312f2f;
+  font-size: clamp(0.875rem, 1vw, 1rem);
+  border-radius: 4px;
+}
+.navigation-container .nav__auth .nav__search-image {
+  padding-right: 20px;
+}
+.navigation-container .nav__auth .nav__login-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.navigation-container .nav__auth .nav__login-btn img {
+  height: clamp(20px, 2vw, 30px);
 }

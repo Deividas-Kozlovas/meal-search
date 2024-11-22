@@ -56,5 +56,6 @@ module.exports = {
     devMiddleware: {
       writeToDisk: true, // Ensure files are written to disk in public
     },
+    historyApiFallback: true, // Ensure all routes serve index.html
   },
 };
