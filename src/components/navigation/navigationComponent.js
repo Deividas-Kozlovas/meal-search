@@ -28,7 +28,7 @@ export default function navigationComponent() {
           </li>
         </ul>
         <div class="nav__auth">
-          <input type="text" placeholder="Search..." class="nav__search-box" />
+          <input type="text" placeholder="Search..." class="nav__search-box" id="search-input"/>
           <img class="nav__search-image" src="${searchIcon}" alt="Search Icon" />
           <button class="nav__login-btn">
             <img src="${userIcon}" alt="User Icon" />
