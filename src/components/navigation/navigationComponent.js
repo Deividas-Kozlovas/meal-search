@@ -27,13 +27,13 @@ export default function navigationComponent() {
             <a href="#about" class="nav__link">About Us</a>
           </li>
         </ul>
-        <div class="nav__auth">
+        <form class="nav__auth">
           <input type="text" placeholder="Search..." class="nav__search-box" id="search-input"/>
           <img class="nav__search-image" src="${searchIcon}" alt="Search Icon" />
           <button class="nav__login-btn">
             <img src="${userIcon}" alt="User Icon" />
           </button>
-        </div>
+        </form>
       </nav>
     </div>
   `;

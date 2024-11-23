@@ -1,3 +1,5 @@
+import searchFilterComponent from "../components/searchFIlter/searchFilterComponent";
+
 export default function mealsPage(meals = []) {
   const mealsHTML = meals
     .map((meal) => {
@@ -12,6 +14,7 @@ export default function mealsPage(meals = []) {
     .join("");
 
   return `
+    ${searchFilterComponent()}
     <div class="meals-page">
       <h1>Meals Page</h1>
       <div id="meals-list">
