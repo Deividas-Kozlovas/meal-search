@@ -64,28 +64,6 @@
   }
 
   @media (max-width: 1282px) {
-    .nav {
-      flex-direction: column;
-      align-items: center;
-
-      &__links {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        padding: 0;
-      }
-
-      &__auth {
-        flex-direction: row;
-        justify-content: center;
-        gap: 10px;
-
-        .nav__search-box {
-          width: auto;
-        }
-      }
-    }
-
     .hero {
       flex-direction: column;
       text-align: center;

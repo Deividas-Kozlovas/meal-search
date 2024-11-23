@@ -10,16 +10,16 @@ export default function searchMeals() {
       const query = event.target.value.trim();
 
       if (event.key === "Enter" && query) {
+        event.preventDefault();
+
         const currentUrl = window.location.pathname;
         const newUrl = `/meals`;
 
         if (currentUrl !== newUrl) {
           window.history.pushState({ query }, "", newUrl);
-
-          await fetchAndRenderMeals(query);
-        } else {
-          await fetchAndRenderMeals(query);
         }
+
+        await fetchAndRenderMeals(query);
       }
     });
   }
