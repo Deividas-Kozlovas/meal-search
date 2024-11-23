@@ -126,7 +126,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ searchFilterComponent)\n/* harmony export */ });\nfunction searchFilterComponent() {\n  return \"\\n      <form id=\\\"filter-form\\\" class=\\\"filter\\\">\\n        <div class=\\\"filter__group\\\">\\n          <input\\n            id=\\\"ingredient-filter\\\"\\n            name=\\\"ingredient\\\"\\n            type=\\\"text\\\"\\n            placeholder=\\\"Filter by ingredient\\\"\\n            class=\\\"filter__input\\\"\\n          />\\n        </div>\\n        <div class=\\\"filter__group\\\">\\n          <input\\n            id=\\\"category-filter\\\"\\n            name=\\\"category\\\"\\n            type=\\\"text\\\"\\n            placeholder=\\\"Filter by food category\\\"\\n            class=\\\"filter__input\\\"\\n          />\\n        </div>\\n        <div class=\\\"filter__group\\\">\\n          <input\\n            id=\\\"area-filter\\\"\\n            name=\\\"area\\\"\\n            type=\\\"text\\\"\\n            placeholder=\\\"Fillter by location\\\"\\n            class=\\\"filter__input\\\"\\n          />\\n        </div>\\n        <button type=\\\"submit\\\" class=\\\"filter__button\\\">Filter Meals</button>\\n      </form>\\n    \";\n}\n\n//# sourceURL=webpack://webpack-latest/./src/components/searchFIlter/searchFilterComponent.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ searchFilterComponent)\n/* harmony export */ });\n/* harmony import */ var _searchFilterComponent_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./searchFilterComponent.scss */ \"./src/components/searchFIlter/searchFilterComponent.scss\");\n\nfunction searchFilterComponent() {\n  return \"\\n      <form id=\\\"filter-form\\\" class=\\\"filter\\\">\\n        <div class=\\\"filter__group\\\">\\n          <input\\n            id=\\\"ingredient-filter\\\"\\n            name=\\\"ingredient\\\"\\n            type=\\\"text\\\"\\n            placeholder=\\\"Filter by ingredient\\\"\\n            class=\\\"filter__input\\\"\\n          />\\n        </div>\\n        <div class=\\\"filter__group\\\">\\n          <input\\n            id=\\\"category-filter\\\"\\n            name=\\\"category\\\"\\n            type=\\\"text\\\"\\n            placeholder=\\\"Filter by food category\\\"\\n            class=\\\"filter__input\\\"\\n          />\\n        </div>\\n        <div class=\\\"filter__group\\\">\\n          <input\\n            id=\\\"area-filter\\\"\\n            name=\\\"area\\\"\\n            type=\\\"text\\\"\\n            placeholder=\\\"Fillter by location\\\"\\n            class=\\\"filter__input\\\"\\n          />\\n        </div>\\n        <button type=\\\"submit\\\" class=\\\"filter__button\\\">Filter Meals</button>\\n      </form>\\n    \";\n}\n\n//# sourceURL=webpack://webpack-latest/./src/components/searchFIlter/searchFilterComponent.js?");
 
 /***/ }),
 
@@ -203,7 +203,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ mealsPage)\n/* harmony export */ });\n/* harmony import */ var _components_searchFIlter_searchFilterComponent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/searchFIlter/searchFilterComponent */ \"./src/components/searchFIlter/searchFilterComponent.js\");\n\nfunction mealsPage() {\n  var meals = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];\n  var mealsHTML = meals.map(function (meal) {\n    return \"\\n        <div class=\\\"meal-item\\\">\\n          <h3>\".concat(meal.strMeal, \"</h3>\\n          <p>\").concat(meal.strInstructions, \"</p>\\n          <img src=\\\"\").concat(meal.strMealThumb, \"\\\" alt=\\\"\").concat(meal.strMeal, \"\\\" />\\n        </div>\\n      \");\n  }).join(\"\");\n  return \"\\n    \".concat((0,_components_searchFIlter_searchFilterComponent__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(), \"\\n    <div class=\\\"meals-page\\\">\\n      <h1>Meals Page</h1>\\n      <div id=\\\"meals-list\\\">\\n        \").concat(mealsHTML, \"\\n      </div>\\n    </div>\\n  \");\n}\n\n//# sourceURL=webpack://webpack-latest/./src/pages/mealsPage.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ mealsPage)\n/* harmony export */ });\n/* harmony import */ var _components_searchFIlter_searchFilterComponent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/searchFIlter/searchFilterComponent */ \"./src/components/searchFIlter/searchFilterComponent.js\");\n\nfunction mealsPage() {\n  var meals = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];\n  var mealsHTML = meals.map(function (meal) {\n    return \"\\n        <div class=\\\"meal-item\\\">\\n          <h3>\".concat(meal.strMeal, \"</h3>\\n          <p>\").concat(meal.strInstructions, \"</p>\\n          <img src=\\\"\").concat(meal.strMealThumb, \"\\\" alt=\\\"\").concat(meal.strMeal, \"\\\" />\\n        </div>\\n      \");\n  }).join(\"\");\n  return \"\\n    <h1>Explore meals tailored to your taste</h1>\\n    \".concat((0,_components_searchFIlter_searchFilterComponent__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(), \"\\n    <div class=\\\"meals-page\\\">\\n      <div id=\\\"meals-list\\\">\\n        \").concat(mealsHTML, \"\\n      </div>\\n    </div>\\n  \");\n}\n\n//# sourceURL=webpack://webpack-latest/./src/pages/mealsPage.js?");
 
 /***/ }),
 
@@ -358,6 +358,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n    if(true) {\n      (function() {\n        var localsJsonString = undefined;\n        // 1732376515650\n        var cssReload = __webpack_require__(/*! ../../../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ \"./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js\")(module.id, {});\n        // only invalidate when locals change\n        if (\n          module.hot.data &&\n          module.hot.data.value &&\n          module.hot.data.value !== localsJsonString\n        ) {\n          module.hot.invalidate();\n        } else {\n          module.hot.accept();\n        }\n        module.hot.dispose(function(data) {\n          data.value = localsJsonString;\n          cssReload();\n        });\n      })();\n    }\n  \n\n//# sourceURL=webpack://webpack-latest/./src/components/navigation/navigationComponent.scss?");
+
+/***/ }),
+
+/***/ "./src/components/searchFIlter/searchFilterComponent.scss":
+/*!****************************************************************!*\
+  !*** ./src/components/searchFIlter/searchFilterComponent.scss ***!
+  \****************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n    if(true) {\n      (function() {\n        var localsJsonString = undefined;\n        // 1732377294345\n        var cssReload = __webpack_require__(/*! ../../../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ \"./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js\")(module.id, {});\n        // only invalidate when locals change\n        if (\n          module.hot.data &&\n          module.hot.data.value &&\n          module.hot.data.value !== localsJsonString\n        ) {\n          module.hot.invalidate();\n        } else {\n          module.hot.accept();\n        }\n        module.hot.dispose(function(data) {\n          data.value = localsJsonString;\n          cssReload();\n        });\n      })();\n    }\n  \n\n//# sourceURL=webpack://webpack-latest/./src/components/searchFIlter/searchFilterComponent.scss?");
 
 /***/ }),
 
@@ -972,7 +983,7 @@ eval("module.exports = __webpack_require__.p + \"images/28560370bd19c9488826.png
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("4dfe019394ffc44419d5")
+/******/ 		__webpack_require__.h = () => ("8e0e95cfa3db068a28f3")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */

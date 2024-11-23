@@ -1,3 +1,5 @@
+import "./searchFilterComponent.scss";
+
 export default function searchFilterComponent() {
   return `
       <form id="filter-form" class="filter">

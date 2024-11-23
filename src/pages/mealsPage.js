@@ -14,9 +14,9 @@ export default function mealsPage(meals = []) {
     .join("");
 
   return `
+    <h1>Explore meals tailored to your taste</h1>
     ${searchFilterComponent()}
     <div class="meals-page">
-      <h1>Meals Page</h1>
       <div id="meals-list">
         ${mealsHTML}
       </div>
