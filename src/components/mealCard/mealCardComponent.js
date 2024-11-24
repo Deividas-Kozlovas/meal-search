@@ -1,3 +1,5 @@
+import "./mealCardComponent.scss";
+
 export default function mealCardComponent(meal) {
   return `
       <div class="meal-card">
