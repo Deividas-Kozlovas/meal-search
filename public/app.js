@@ -203,7 +203,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ mealsPage)\n/* harmony export */ });\n/* harmony import */ var _components_searchFIlter_searchFilterComponent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/searchFIlter/searchFilterComponent */ \"./src/components/searchFIlter/searchFilterComponent.js\");\n\nfunction mealsPage() {\n  var meals = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];\n  var mealsHTML = meals.map(function (meal) {\n    return \"\\n        <div class=\\\"meal-item\\\">\\n          <h3>\".concat(meal.strMeal, \"</h3>\\n          <p>\").concat(meal.strInstructions, \"</p>\\n          <img src=\\\"\").concat(meal.strMealThumb, \"\\\" alt=\\\"\").concat(meal.strMeal, \"\\\" />\\n        </div>\\n      \");\n  }).join(\"\");\n  return \"\\n    <h1>Explore meals tailored to your taste</h1>\\n    \".concat((0,_components_searchFIlter_searchFilterComponent__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(), \"\\n    <div class=\\\"meals-page\\\">\\n      <div id=\\\"meals-list\\\">\\n        \").concat(mealsHTML, \"\\n      </div>\\n    </div>\\n  \");\n}\n\n//# sourceURL=webpack://webpack-latest/./src/pages/mealsPage.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ mealsPage)\n/* harmony export */ });\n/* harmony import */ var _components_searchFIlter_searchFilterComponent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/searchFIlter/searchFilterComponent */ \"./src/components/searchFIlter/searchFilterComponent.js\");\n\nfunction mealsPage() {\n  var meals = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];\n  var mealsHTML = meals.map(function (meal) {\n    return \"\\n        <div class=\\\"meal-item\\\">\\n          <h3>\".concat(meal.strMeal, \"</h3>\\n          <p>\").concat(meal.strInstructions, \"</p>\\n          <img src=\\\"\").concat(meal.strMealThumb, \"\\\" alt=\\\"\").concat(meal.strMeal, \"\\\" />\\n        </div>\\n      \");\n  }).join(\"\");\n  return \"\\n    \".concat((0,_components_searchFIlter_searchFilterComponent__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(), \"\\n    <h1>Explore meals tailored to your taste</h1>\\n\\n    <div class=\\\"meals-page\\\">\\n      <div id=\\\"meals-list\\\">\\n        \").concat(mealsHTML, \"\\n      </div>\\n    </div>\\n  \");\n}\n\n//# sourceURL=webpack://webpack-latest/./src/pages/mealsPage.js?");
 
 /***/ }),
 
@@ -983,7 +983,7 @@ eval("module.exports = __webpack_require__.p + \"images/28560370bd19c9488826.png
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("47ef98a52a3999692ef9")
+/******/ 		__webpack_require__.h = () => ("453417713e0e768921e8")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
