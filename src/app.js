@@ -1,28 +1,30 @@
 import "./scss/style.scss";
-import renderPage from "./modules/ui/renderPage";
-import routes from "./modules/utils/routes";
+import renderDom from "./modules/ui/renderDom";
 import navigationComponent from "./components/navigation/navigationComponent";
 import searchMeals from "./modules/events/searchMeals";
+import loadHomePage from "./pages/homePage";
 
-async function handleRoute() {
-  const path = window.location.pathname;
-  const route = routes[path] || routes["/"];
-
-  const pageContent = await route();
-
-  renderPage(pageContent, "#app", "App container was not found");
-}
-
-renderPage(
+renderDom(
   navigationComponent(),
   "#navigation",
   "Navigation component was not found"
 );
 
-handleRoute();
+(async () => {
+  try {
+    const homepageContent = await loadHomePage();
+    renderDom(homepageContent, "#app", "Home page was not found");
+  } catch (error) {
+    console.error("Error rendering home page:", error);
+    renderDom(
+      `<div class="error-message">
+        <h1>Error</h1>
+        <p>Failed to load the home page. Please try again later.</p>
+      </div>`,
+      "#app",
+      "App container was not found"
+    );
+  }
+})();
 
 searchMeals();
-
-window.addEventListener("popstate", () => {
-  handleRoute();
-});
