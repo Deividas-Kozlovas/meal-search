@@ -1,8 +1,8 @@
-import "./scss/style.scss";
 import renderDom from "./modules/ui/renderDom";
 import navigationComponent from "./components/navigation/navigationComponent";
 import searchMeals from "./modules/events/searchMeals";
 import loadHomePage from "./pages/homePage";
+import filterMeals from "./modules/events/filterMeals";
 
 renderDom(
   navigationComponent(),
@@ -14,6 +14,9 @@ renderDom(
   try {
     const homepageContent = await loadHomePage();
     renderDom(homepageContent, "#app", "Home page was not found");
+
+    searchMeals();
+    filterMeals();
   } catch (error) {
     console.error("Error rendering home page:", error);
     renderDom(
@@ -26,5 +29,3 @@ renderDom(
     );
   }
 })();
-
-searchMeals();

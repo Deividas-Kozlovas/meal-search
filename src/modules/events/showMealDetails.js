@@ -9,7 +9,6 @@ export default async function showMealDetails(mealId) {
 
     if (mealData && mealData.meals) {
       const meal = mealData.meals[0];
-      // Render the full meal details in the app container
       const fullMealCard = fullMealCardComponent(meal);
       renderDom(fullMealCard, "#app", "App container was not found");
     } else {
