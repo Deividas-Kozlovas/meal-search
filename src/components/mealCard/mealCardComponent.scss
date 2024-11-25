@@ -1,20 +1,12 @@
-// Color Variables
-$primary-color: #f3f3f3;
-$secondary-color: #312f2f;
-$red-color: #fe5e54;
-$green-color: #046e1b;
-$bisque-color: #ffe1c5;
-$orange-color: #f79f1a;
-$secondary-text-color: rgb(158, 157, 157);
+@use "../../scss/variables.scss" as var;
 
-// Meal Card Styles
 .meal-card {
   border: none;
   border-radius: 12px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  background-color: $primary-color;
+  background-color: var.$primary-color;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
@@ -28,7 +20,7 @@ $secondary-text-color: rgb(158, 157, 157);
     overflow: hidden;
     width: 100%;
     aspect-ratio: 16 / 9;
-    border-bottom: 3px solid $bisque-color;
+    border-bottom: 3px solid var.$bisque-color;
 
     img {
       width: 100%;
@@ -44,7 +36,7 @@ $secondary-text-color: rgb(158, 157, 157);
 
   &__content {
     padding: 20px;
-    background-color: $bisque-color;
+    background-color: var.$bisque-color;
     text-align: center;
   }
 
@@ -52,24 +44,23 @@ $secondary-text-color: rgb(158, 157, 157);
     font-size: 1.8rem;
     font-weight: bold;
     margin: 0 0 12px;
-    color: $orange-color;
+    color: var.$orange-color;
   }
 
   &__instructions {
     font-size: 1rem;
     line-height: 1.5;
-    color: $secondary-text-color;
+    color: var.$secondary-text-color;
   }
 }
 
-// Meals Page Styles
 .meals-page {
   padding: 16px;
 
   &__title {
     font-size: 2rem;
     margin-bottom: 16px;
-    color: $secondary-color;
+    color: var.$secondary-color;
     text-align: center;
   }
 
@@ -77,18 +68,14 @@ $secondary-text-color: rgb(158, 157, 157);
     display: grid;
     gap: 24px;
 
-    // 3 items per row layout
     grid-template-columns: repeat(3, 1fr);
 
     @media (max-width: 900px) {
-      grid-template-columns: repeat(
-        2,
-        1fr
-      ); // 2 items in a row on medium screens
+      grid-template-columns: repeat(2, 1fr);
     }
 
     @media (max-width: 600px) {
-      grid-template-columns: 1fr; // 1 item per row on smaller screens
+      grid-template-columns: 1fr;
     }
   }
 }

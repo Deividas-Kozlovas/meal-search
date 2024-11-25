@@ -228,6 +228,120 @@ body {
     grid-template-columns: 1fr;
   }
 }
+/*!*************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/fullMealCard/fullMealCardComponent.scss ***!
+  \*************************************************************************************************************************************************/
+.full-meal-card {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #ffe1c5;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 16px;
+}
+.full-meal-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+.full-meal-card__top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+.full-meal-card__image {
+  width: 40%;
+  height: auto;
+  margin-right: 16px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.full-meal-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.full-meal-card__content {
+  width: 55%;
+}
+.full-meal-card__text {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.full-meal-card__text h3,
+.full-meal-card__text h4 {
+  color: #f79f1a;
+}
+.full-meal-card__text h3 {
+  text-align: center;
+  font-size: 2rem;
+}
+.full-meal-card__text__ingredients {
+  list-style-type: none;
+  padding: 0;
+  margin: 8px 0;
+  font-size: 1rem;
+  color: rgb(158, 157, 157);
+}
+.full-meal-card__text__ingredients li {
+  margin-bottom: 6px;
+  display: flex;
+  justify-content: space-between;
+}
+.full-meal-card__instructions-container {
+  margin-top: 16px;
+  text-align: left;
+  width: 100%;
+}
+.full-meal-card__instructions-container h4 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #f79f1a;
+}
+.full-meal-card__instructions-container__instructions {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: rgb(158, 157, 157);
+  margin-top: 8px;
+}
+@media (max-width: 1083px) {
+  .full-meal-card__top {
+    flex-direction: column;
+    align-items: center;
+  }
+  .full-meal-card__image {
+    width: 80%;
+    margin-right: 0;
+    margin-bottom: 16px;
+  }
+  .full-meal-card__content {
+    width: 100%;
+  }
+  .full-meal-card__text {
+    padding: 20px;
+    text-align: center;
+  }
+  .full-meal-card__ingredients {
+    list-style-type: none;
+    padding: 0;
+    margin: 8px 0;
+    font-size: 1rem;
+    color: rgb(158, 157, 157);
+  }
+  .full-meal-card__ingredients li {
+    margin-bottom: 6px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .full-meal-card__instructions-container {
+    margin-top: 20px;
+    text-align: center;
+  }
+}
 /*!**********************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/headerComponent/headerComponent.scss ***!
   \**********************************************************************************************************************************************/
