@@ -31,6 +31,8 @@ export default function searchFilterComponent() {
           />
         </div>
         <button type="submit" class="filter__button">Filter Meals</button>
-      </form>
+        </form>
+        <button type="submit" class="random-meal" id="random-meal">Random meal</button>
+
     `;
 }

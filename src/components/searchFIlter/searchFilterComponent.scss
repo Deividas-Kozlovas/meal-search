@@ -35,14 +35,16 @@
     border: 0;
     padding: clamp(5px, 1vw, 10px);
 
-    &:hover {
-      background-color: #2c7abf;
-    }
-
     &:active {
       background-color: #2ecc71;
     }
   }
+}
+
+.random-meal {
+  @include mixin.primary_button;
+  border: 0;
+  padding: clamp(5px, 1vw, 10px);
 }
 
 @media (max-width: 1000px) {

@@ -3,6 +3,7 @@ import navigationComponent from "./components/navigation/navigationComponent";
 import searchMeals from "./modules/events/searchMeals";
 import loadHomePage from "./pages/homePage";
 import filterMeals from "./modules/events/filterMeals";
+import getRandomMeal from "./modules/events/getRandomMeal";
 
 renderDom(
   navigationComponent(),
@@ -17,6 +18,7 @@ renderDom(
 
     searchMeals();
     filterMeals();
+    getRandomMeal();
   } catch (error) {
     console.error("Error rendering home page:", error);
     renderDom(
