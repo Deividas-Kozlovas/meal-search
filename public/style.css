@@ -25,15 +25,13 @@ body {
   display: flex;
   align-items: center;
   text-decoration: none;
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+  font-weight: bold;
+  color: #046e1b;
 }
 .navigation-container .nav__logo .nav__logo-link img {
   height: clamp(20px, 2vw, 40px);
   margin-right: 5px;
-}
-.navigation-container .nav__logo .nav__logo-link p {
-  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
-  font-weight: bold;
-  color: #046e1b;
 }
 .navigation-container .nav__links {
   display: flex;
@@ -936,15 +934,13 @@ body {
   flex-direction: row;
   align-items: center;
   text-decoration: none;
+  font-size: 3vw;
+  color: #046e1b;
+  font-weight: bold;
 }
 .footer__logo img {
   height: 2rem;
   margin-right: 1rem;
-}
-.footer__logo p {
-  font-size: 3vw;
-  color: #046e1b;
-  font-weight: bold;
 }
 .footer__left {
   display: flex;

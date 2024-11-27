@@ -10,6 +10,9 @@
     flex-direction: row;
     align-items: center;
     text-decoration: none;
+    font-size: 3vw;
+    color: var.$green-color;
+    font-weight: bold;
 
     img {
       height: 2rem;
@@ -17,9 +20,6 @@
     }
 
     p {
-      font-size: 3vw;
-      color: var.$green-color;
-      font-weight: bold;
     }
   }
 

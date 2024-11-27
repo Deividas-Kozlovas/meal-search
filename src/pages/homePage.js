@@ -16,6 +16,5 @@ export default async function homePage() {
     ${aboutComponent()}
     ${communityComponent(rewiev)}
     ${mobileAppComponent()}
-    ${footerComponent()}
   `;
 }

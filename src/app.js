@@ -4,6 +4,8 @@ import navigationComponent from "./components/navigation/navigationComponent";
 import searchMeals from "./modules/events/searchMeals";
 import loadHomePage from "./pages/homePage";
 import listMealsByLetter from "./modules/events/listMealsByFirstLetter";
+import footerComponent from "./components/footerComponent/footerComponent";
+import navigation from "./modules/events/navigation";
 
 renderDom(
   navigationComponent(),
@@ -17,6 +19,7 @@ renderDom(
     renderDom(homepageContent, "#app", "Home page was not found");
     listMealsByLetter();
     searchMeals();
+    navigation();
   } catch (error) {
     console.error("Error rendering home page:", error);
     renderDom(
@@ -29,3 +32,5 @@ renderDom(
     );
   }
 })();
+
+renderDom(footerComponent(), "#footer", "Footer component was not found");

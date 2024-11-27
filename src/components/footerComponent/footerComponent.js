@@ -8,9 +8,9 @@ export default function footerComponent() {
   return `
     <div class="footer">
       <div class="footer__top">
-        <a href="#" class="footer__logo">
+        <a href="#home" class="footer__logo nav-link">
           <img src="${logo}" alt="Recipedio Logo" class="footer__logo-image" />
-          <p class="footer__logo-text">Recipedio</p>
+          Recipedio
         </a>
       </div>
       <div class="footer__left">
@@ -22,16 +22,16 @@ export default function footerComponent() {
             <p class="footer__section-title">Menu</p>
             <ul class="footer__links">
               <li class="footer__link-item">
-                <a href="#" class="footer__link">Home</a>
+                <a href="#home" class="footer__link nav-link">Home</a>
               </li>
               <li class="footer__link-item">
-                <a href="#" class="footer__link">Recipe</a>
+                <a href="#recipe" class="footer__link nav-link">Recipe</a>
               </li>
               <li class="footer__link-item">
-                <a href="#" class="footer__link">Community</a>
+                <a href="#community" class="footer__link nav-link">Community</a>
               </li>
               <li class="footer__link-item">
-                <a href="#" class="footer__link">About Us</a>
+                <a href="#about" class="footer__link nav-link">About Us</a>
               </li>
             </ul>
           </div>

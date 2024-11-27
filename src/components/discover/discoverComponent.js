@@ -12,7 +12,7 @@ export default function discoverComponent(meals) {
           Check out our most popular recipes of this week
         </p>
       </div>
-      <a href="#" class="discover__see-all">See All</a>
+      <a href="#recipe" class="discover__see-all nav-link">See All</a>
     </div>
     <div class="discover__recipes">
       ${meals

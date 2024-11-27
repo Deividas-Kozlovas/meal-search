@@ -10,14 +10,14 @@ export default function mobileAppComponent() {
         Embrace the joy of cooking with our app! Get it on your iPhone or Android. Your kitchen adventure begins now!
       </p>
       <div class="aplication__buttons">
-        <a href="#" class="aplication__button aplication__button--apple">
+        <a href="https://www.apple.com/app-store/" target="_blank" class="aplication__button aplication__button--apple">
           <img src="${apple}" alt="Apple logo" class="aplication__button-icon" />
           <div class="aplication__button-text">
             <p>Download on the</p>
             <span>App Store</span>
           </div>
         </a>
-        <a href="#" class="aplication__button aplication__button--android">
+        <a href="https://play.google.com/store/apps?hl=en_US/" target="_blank" class="aplication__button aplication__button--android">
           <img src="${android}" alt="Android logo" class="aplication__button-icon" />
           <div class="aplication__button-text">
             <p>Download on the</p>

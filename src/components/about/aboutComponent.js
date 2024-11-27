@@ -14,7 +14,7 @@ export default function aboutComponent() {
         <p class="about-section__description">
           Our recipes are the heart and soul of our culinary community, and they reflect our commitment to providing you with memorable and delightful dining experiences.
         </p>
-        <a href="#" class="about-section__link">Learn More</a>
+        <a href="#about" class="about-section__link nav-link">Learn More</a>
         <div class="about-section__image">
           <img src="${bread}" alt="Bread" class="about-section__image about-section__image--bread">
           <img src="${avocado}" alt="Avocado" class="about-section__image about-section__image--avocado">
