@@ -2,8 +2,6 @@ import renderDom from "./modules/ui/renderDom";
 import navigationComponent from "./components/navigation/navigationComponent";
 import searchMeals from "./modules/events/searchMeals";
 import loadHomePage from "./pages/homePage";
-import filterMeals from "./modules/events/filterMeals";
-import getRandomMeal from "./modules/events/getRandomMeal";
 
 renderDom(
   navigationComponent(),
