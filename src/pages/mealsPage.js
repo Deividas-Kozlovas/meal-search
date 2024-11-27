@@ -3,11 +3,24 @@ import mealCardComponent from "../components/mealCard/mealCardComponent";
 import filterMeals from "../modules/events/filterMeals";
 import showMealDetails from "../modules/events/showMealDetails";
 
-export default function mealsPage(meals = []) {
+export default function mealsPage(meals = [], renderMeals, getRandomMeals) {
   const mealsHTML = meals.map(mealCardComponent).join("");
 
+  const pageContent = `
+    ${searchFilterComponent()} 
+    <h1 class="meals-page__title">Explore meals tailored to your taste</h1>
+    <div class="meals-page">
+      <div class="meals-page__list" id="meals-list">
+        ${mealsHTML} 
+      </div>
+    </div>
+  `;
+
   setTimeout(() => {
-    filterMeals();
+    filterMeals(renderMeals, getRandomMeals);
+  }, 0);
+
+  setTimeout(() => {
     const mealCards = document.querySelectorAll(".meal-card");
     mealCards.forEach((card) => {
       card.addEventListener("click", (event) => {
@@ -17,13 +30,5 @@ export default function mealsPage(meals = []) {
     });
   }, 0);
 
-  return `
-    ${searchFilterComponent()} <!-- Render the filter form -->
-    <h1 class="meals-page__title">Explore meals tailored to your taste</h1>
-    <div class="meals-page">
-      <div class="meals-page__list" id="meals-list">
-        ${mealsHTML} <!-- Render meal cards -->
-      </div>
-    </div>
-  `;
+  return pageContent;
 }

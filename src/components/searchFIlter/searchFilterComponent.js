@@ -3,7 +3,7 @@ import "./searchFilterComponent.scss";
 export default function searchFilterComponent() {
   return `
     <div class="filter-container">
-      <form id="filter-form" class="filter">
+      <form id="filter-form" class="filter" action="#">
         <div class="filter__group">
           <input
             id="ingredient-filter"

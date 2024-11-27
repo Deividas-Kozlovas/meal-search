@@ -6,6 +6,7 @@ import mealsPage from "../../pages/mealsPage";
 import getSixMeals from "../api/getSixMeals";
 import aboutPage from "../../pages/aboutPage";
 import communityPage from "../../pages/communityPage";
+import renderMeals from "../ui/renderMeals";
 
 export default async function navigation() {
   document.body.addEventListener("click", async function (event) {
@@ -27,7 +28,7 @@ export default async function navigation() {
         const homepageContent = await loadHomePage();
         renderDom(homepageContent, "#app", "Home page was not found");
         listMealsByFirstLetter();
-        searchMeals();
+        searchMeals(renderMeals);
         break;
       case "recipe":
         try {

@@ -1,12 +1,12 @@
 import ajaxService from "../services/ajaxService";
-import renderMeals from "../ui/renderMeals";
 
-export default function filterMeals() {
+export default function filterMeals(renderMeals, getRandomMeals) {
   const filterForm = document.querySelector("#filter-form");
 
   if (filterForm) {
     filterForm.addEventListener("submit", async (event) => {
       event.preventDefault();
+      event.stopPropagation();
 
       const ingredient = document
         .querySelector("#ingredient-filter")
@@ -20,20 +20,47 @@ export default function filterMeals() {
 
       if (storedMeals) {
         const mealData = JSON.parse(storedMeals);
-        renderMeals(mealData, `Filter: ${filterKey}`);
+        renderMeals(mealData, `Filter: ${filterKey}`, getRandomMeals);
       } else {
         if (ingredient || category || area) {
           const filters = { ingredient, category, area };
-          await fetchAndRenderFilteredMeals(filters, filterKey);
+          await fetchAndRenderFilteredMeals(
+            filters,
+            filterKey,
+            renderMeals,
+            getRandomMeals
+          );
         } else {
-          alert("Please provide at least one filter criteria.");
+          alert("Please provide at least one filter input.");
         }
       }
     });
   }
+
+  document
+    .querySelector("#random-meal")
+    ?.addEventListener("click", async () => {
+      const randomMeal = await fetchRandomMeal();
+      renderMeals(randomMeal, "Random Meal", getRandomMeals);
+    });
 }
 
-async function fetchAndRenderFilteredMeals(filters, filterKey) {
+async function fetchRandomMeal() {
+  const apiUrl = "https://www.themealdb.com/api/json/v1/1/random.php";
+  try {
+    const mealData = await ajaxService(apiUrl);
+    return mealData;
+  } catch (error) {
+    console.error("Error fetching random meal:", error);
+  }
+}
+
+async function fetchAndRenderFilteredMeals(
+  filters,
+  filterKey,
+  renderMeals,
+  getRandomMeals
+) {
   const { ingredient, category, area } = filters;
 
   const params = new URLSearchParams();
@@ -45,12 +72,11 @@ async function fetchAndRenderFilteredMeals(filters, filterKey) {
 
   try {
     const mealData = await ajaxService(apiUrl);
-
     localStorage.setItem(filterKey, JSON.stringify(mealData));
 
-    renderMeals(mealData, `Filter: ${params.toString()}`);
+    renderMeals(mealData, `Filter: ${params.toString()}`, getRandomMeals);
   } catch (error) {
     console.error("Error fetching filtered meal data:", error);
-    renderMeals(null, `Filter: ${params.toString()}`);
+    renderMeals(null, `Filter: ${params.toString()}`, getRandomMeals);
   }
 }
