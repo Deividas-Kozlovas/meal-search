@@ -21,13 +21,29 @@ export default function searchMeals() {
 }
 
 async function fetchAndRenderMeals(query) {
-  const apiUrl = `https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`;
+  const localStorageKey = `meal-search-${query.toLowerCase()}`;
 
-  try {
-    const mealData = await ajaxService(apiUrl);
+  const storedData = localStorage.getItem(localStorageKey);
+
+  if (storedData) {
+    const mealData = JSON.parse(storedData);
     renderMeals(mealData, query);
-  } catch (error) {
-    console.error("Error fetching meal data:", error);
-    renderMeals(null, query);
+  } else {
+    const apiUrl = `https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`;
+
+    try {
+      const mealData = await ajaxService(apiUrl);
+
+      if (mealData && mealData.meals) {
+        localStorage.setItem(localStorageKey, JSON.stringify(mealData.meals));
+
+        renderMeals(mealData, query);
+      } else {
+        renderMeals(null, query);
+      }
+    } catch (error) {
+      console.error("Error fetching meal data:", error);
+      renderMeals(null, query);
+    }
   }
 }

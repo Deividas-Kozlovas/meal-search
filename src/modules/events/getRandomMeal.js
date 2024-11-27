@@ -1,4 +1,3 @@
-// getRandomMeal.js
 import ajaxService from "../services/ajaxService";
 import renderMeals from "../ui/renderMeals";
 

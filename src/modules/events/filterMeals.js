@@ -14,17 +14,26 @@ export default function filterMeals() {
       const category = document.querySelector("#category-filter").value.trim();
       const area = document.querySelector("#area-filter").value.trim();
 
-      if (ingredient || category || area) {
-        const filters = { ingredient, category, area };
-        await fetchAndRenderFilteredMeals(filters);
+      const filterKey = `${ingredient}-${category}-${area}`;
+
+      const storedMeals = localStorage.getItem(filterKey);
+
+      if (storedMeals) {
+        const mealData = JSON.parse(storedMeals);
+        renderMeals(mealData, `Filter: ${filterKey}`);
       } else {
-        alert("Please provide at least one filter criteria.");
+        if (ingredient || category || area) {
+          const filters = { ingredient, category, area };
+          await fetchAndRenderFilteredMeals(filters, filterKey);
+        } else {
+          alert("Please provide at least one filter criteria.");
+        }
       }
     });
   }
 }
 
-async function fetchAndRenderFilteredMeals(filters) {
+async function fetchAndRenderFilteredMeals(filters, filterKey) {
   const { ingredient, category, area } = filters;
 
   const params = new URLSearchParams();
@@ -36,6 +45,8 @@ async function fetchAndRenderFilteredMeals(filters) {
 
   try {
     const mealData = await ajaxService(apiUrl);
+
+    localStorage.setItem(filterKey, JSON.stringify(mealData));
 
     renderMeals(mealData, `Filter: ${params.toString()}`);
   } catch (error) {
