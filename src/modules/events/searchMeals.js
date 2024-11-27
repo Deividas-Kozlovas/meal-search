@@ -1,6 +1,9 @@
 import ajaxService from "../services/ajaxService";
 import renderDom from "../ui/renderDom";
 import mealsPage from "../../pages/mealsPage";
+import filterMeals from "./filterMeals";
+import getRandomMeal from "./getRandomMeal";
+
 export default function searchMeals() {
   const searchForm = document.querySelector("#search-meal-form");
   const searchInput = document.querySelector("#search-meal-input");
@@ -12,12 +15,16 @@ export default function searchMeals() {
 
       if (query) {
         await fetchAndRenderMeals(query);
+
+        filterMeals();
+        getRandomMeal();
       } else {
         alert("Please enter a search query.");
       }
     });
   }
 }
+
 async function fetchAndRenderMeals(query) {
   try {
     const apiUrl = `https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`;

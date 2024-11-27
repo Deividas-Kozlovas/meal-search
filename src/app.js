@@ -17,8 +17,6 @@ renderDom(
     renderDom(homepageContent, "#app", "Home page was not found");
 
     searchMeals();
-    filterMeals();
-    getRandomMeal();
   } catch (error) {
     console.error("Error rendering home page:", error);
     renderDom(

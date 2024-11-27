@@ -33,6 +33,5 @@ export default function searchFilterComponent() {
         <button type="submit" class="filter__button">Filter Meals</button>
         </form>
         <button type="submit" class="random-meal" id="random-meal">Random meal</button>
-
     `;
 }
