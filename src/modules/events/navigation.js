@@ -30,8 +30,6 @@ export default async function navigation() {
         renderDom(homepageContent, "#app", "Home page was not found");
         listMealsByFirstLetter();
 
-        // Call searchMeals with a proper function reference
-        // You need to pass data (mealData) and query when calling renderMeals
         searchMeals(renderMeals, "Home page search", getRandomMeal);
         break;
 
