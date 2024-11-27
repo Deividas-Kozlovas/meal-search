@@ -1,3 +1,4 @@
+import "./scss/style.scss";
 import renderDom from "./modules/ui/renderDom";
 import navigationComponent from "./components/navigation/navigationComponent";
 import searchMeals from "./modules/events/searchMeals";

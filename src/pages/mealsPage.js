@@ -7,10 +7,7 @@ export default function mealsPage(meals = []) {
   const mealsHTML = meals.map(mealCardComponent).join("");
 
   setTimeout(() => {
-    // Attach filterMeals to handle the filter form
     filterMeals();
-
-    // Attach click event listeners to meal cards for showing details
     const mealCards = document.querySelectorAll(".meal-card");
     mealCards.forEach((card) => {
       card.addEventListener("click", (event) => {

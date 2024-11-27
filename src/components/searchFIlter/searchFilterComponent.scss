@@ -1,5 +1,14 @@
 @use "../../scss/mixins.scss" as mixin;
 
+.filter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem auto;
+}
+
 .filter {
   display: flex;
   flex-direction: row;
@@ -41,10 +50,17 @@
   }
 }
 
+.random-meal-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 .random-meal {
   @include mixin.primary_button;
   border: 0;
   padding: clamp(5px, 1vw, 10px);
+  margin: 0 auto;
 }
 
 @media (max-width: 1000px) {

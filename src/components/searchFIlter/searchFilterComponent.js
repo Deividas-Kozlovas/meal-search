@@ -2,6 +2,7 @@ import "./searchFilterComponent.scss";
 
 export default function searchFilterComponent() {
   return `
+    <div class="filter-container">
       <form id="filter-form" class="filter">
         <div class="filter__group">
           <input
@@ -30,8 +31,13 @@ export default function searchFilterComponent() {
             class="filter__input"
           />
         </div>
-        <button type="submit" class="filter__button">Filter Meals</button>
-        </form>
+        <div>
+          <button type="submit" class="filter__button">Filter Meals</button>
+        </div>
+      </form>
+      <div class="random-meal-container">
         <button type="submit" class="random-meal" id="random-meal">Random meal</button>
-    `;
+      </div>
+    </div>
+  `;
 }

@@ -12,19 +12,17 @@
   padding: 16px;
 
   &:hover {
-    transform: scale(1.03);
     box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
   }
 
   &__top {
     display: flex;
-    justify-content: space-between;
     margin-bottom: 16px;
     flex-wrap: wrap;
   }
 
   &__image {
-    width: 40%;
+    width: 45%;
     height: auto;
     margin-right: 16px;
     border-radius: 8px;
@@ -38,7 +36,7 @@
   }
 
   &__content {
-    width: 55%;
+    width: 50%;
   }
 
   &__text {
@@ -46,12 +44,12 @@
     flex-direction: column;
     padding: 10px;
 
-    h3,
-    h4 {
+    &__title,
+    &__subtitle {
       color: #f79f1a;
     }
 
-    h3 {
+    &__title {
       text-align: center;
       font-size: 2rem;
     }
@@ -63,7 +61,7 @@
       font-size: 1rem;
       color: var.$secondary-text-color;
 
-      li {
+      &__item {
         margin-bottom: 6px;
         display: flex;
         justify-content: space-between;
@@ -76,13 +74,14 @@
     text-align: left;
     width: 100%;
 
-    h4 {
+    &__title {
       font-size: 1.2rem;
       font-weight: bold;
       color: #f79f1a;
     }
 
     &__instructions {
+      padding-left: 20px;
       font-size: 1.1rem;
       line-height: 1.6;
       color: var.$secondary-text-color;
@@ -118,7 +117,7 @@
       font-size: 1rem;
       color: var.$secondary-text-color;
 
-      li {
+      &__item {
         margin-bottom: 6px;
         display: flex;
         justify-content: space-between;
