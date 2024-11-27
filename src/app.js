@@ -3,6 +3,7 @@ import renderDom from "./modules/ui/renderDom";
 import navigationComponent from "./components/navigation/navigationComponent";
 import searchMeals from "./modules/events/searchMeals";
 import loadHomePage from "./pages/homePage";
+import listMealsByLetter from "./modules/events/listMealsByFirstLetter";
 
 renderDom(
   navigationComponent(),
@@ -14,7 +15,7 @@ renderDom(
   try {
     const homepageContent = await loadHomePage();
     renderDom(homepageContent, "#app", "Home page was not found");
-
+    listMealsByLetter();
     searchMeals();
   } catch (error) {
     console.error("Error rendering home page:", error);
