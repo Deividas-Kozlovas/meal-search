@@ -1,8 +1,5 @@
 import ajaxService from "../services/ajaxService";
-import renderDom from "../ui/renderDom";
-import mealsPage from "../../pages/mealsPage";
-import filterMeals from "./filterMeals";
-import getRandomMeal from "./getRandomMeal";
+import renderMeals from "../ui/renderMeals";
 
 export default function searchMeals() {
   const searchForm = document.querySelector("#search-meal-form");
@@ -14,41 +11,17 @@ export default function searchMeals() {
       const query = searchInput.value.trim();
 
       if (query) {
-        await fetchAndRenderMeals(query);
-
-        filterMeals();
-        getRandomMeal();
+        const apiUrl = `https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`;
+        try {
+          const mealData = await ajaxService(apiUrl);
+          renderMeals(mealData, query);
+        } catch (error) {
+          console.error("Error fetching meal data:", error);
+          renderMeals(null, query);
+        }
       } else {
         alert("Please enter a search query.");
       }
     });
-  }
-}
-
-async function fetchAndRenderMeals(query) {
-  try {
-    const apiUrl = `https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`;
-    const mealData = await ajaxService(apiUrl);
-    if (
-      mealData &&
-      Array.isArray(mealData.meals) &&
-      mealData.meals.length > 0
-    ) {
-      const mealsPageContent = mealsPage(mealData.meals);
-      renderDom(mealsPageContent, "#app", "App container was not found");
-    } else {
-      renderDom(
-        `<p>No meals found for your search query "${query}".</p>`,
-        "#app",
-        "App container was not found"
-      );
-    }
-  } catch (error) {
-    console.error("Error fetching meal data:", error);
-    renderDom(
-      `<p>There was an error fetching the meals. Please try again later.</p>`,
-      "#app",
-      "App container was not found"
-    );
   }
 }
