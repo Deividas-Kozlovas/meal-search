@@ -12,6 +12,7 @@ export default function searchMeals() {
 
       if (query) {
         const apiUrl = `https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`;
+
         try {
           const mealData = await ajaxService(apiUrl);
           renderMeals(mealData, query);
@@ -20,7 +21,7 @@ export default function searchMeals() {
           renderMeals(null, query);
         }
       } else {
-        alert("Please enter a search query.");
+        alert("Please enter meal recipes");
       }
     });
   }

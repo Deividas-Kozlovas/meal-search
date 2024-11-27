@@ -1,10 +1,11 @@
+// getRandomMeal.js
 import ajaxService from "../services/ajaxService";
-import renderDom from "../ui/renderDom";
-import mealsPage from "../../pages/mealsPage";
+import renderMeals from "../ui/renderMeals"; // Import renderMeals function
 
 export default function getRandomMeal() {
   const randomMealBtn = document.querySelector("#random-meal");
 
+  // Ensure the button is found before attaching the event listener
   if (randomMealBtn) {
     randomMealBtn.addEventListener("click", async () => {
       await fetchAndRenderRandomMeal();
@@ -17,30 +18,11 @@ export default function getRandomMeal() {
 async function fetchAndRenderRandomMeal() {
   try {
     const apiUrl = `https://www.themealdb.com/api/json/v1/1/random.php`;
-    const randomMealData = await ajaxService(apiUrl);
+    const randomMealData = await ajaxService(apiUrl); // Fetch the random meal data from the API
 
-    if (
-      randomMealData &&
-      Array.isArray(randomMealData.meals) &&
-      randomMealData.meals.length > 0
-    ) {
-      const randomMealsPageContent = mealsPage(randomMealData.meals);
-
-      renderDom(randomMealsPageContent, "#app", "App container was not found");
-      getRandomMeal();
-    } else {
-      renderDom(
-        `<p>No meals found. Please try again.</p>`,
-        "#app",
-        "App container was not found"
-      );
-    }
+    renderMeals(randomMealData); // Use renderMeals function to render the fetched meal data
   } catch (error) {
-    console.error("Error fetching meal data:", error);
-    renderDom(
-      `<p>There was an error fetching the meals. Please try again later.</p>`,
-      "#app",
-      "App container was not found"
-    );
+    console.error("Error fetching random meal data:", error);
+    renderMeals(null); // If there's an error, render a fallback (no meals found)
   }
 }
